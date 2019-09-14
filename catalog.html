@@ -10,7 +10,7 @@
 
 	<header>
 		<a href="index.html">
-			<img src="/img/logo.svg" width="220" height="47" alt="Магазин «Техномарт»">
+			<img src="./img/logo.svg" width="220" height="47" alt="Магазин «Техномарт»">
 		</a>
 		<p>
 			Интернет-магазин <br>
@@ -75,7 +75,7 @@
 		<section>
 			<h2>Фильтр:</h2>
 			<form action="https://echo.htmlacademy.ru" method="post">
-				<fieldset>
+				<!---<fieldset>
 					<legend>Цена:</legend>
 					<p>
 						<input type="range" aria-label="С помощью ползунка задайте цену на перфораторы" min="0" max="30000" value="25000">
@@ -85,7 +85,7 @@
 						<span>&mdash;</span>
 						<input type="number" aria-label="Задайте конечное значение цены в поле" min="0" max="30000" value="30000">
 					</p>
-				</fieldset>
+				</fieldset>-->
 				<fieldset>
 					<legend>Производители:</legend>
 					<ul>
@@ -115,11 +115,11 @@
 					<legend>Питание:</legend>
 					<ul>
 						<li>
-							<input type="radio" id="akkum" name="Аккумуляторные" checked>
+							<input type="radio" id="akkum" name="type-energy" value="rechargeable" checked>
 							<label for="akkum">Аккумуляторные</label>
 						</li>
 						<li>
-							<input type="radio" id="network" name="Сетевые">
+							<input type="radio" id="network" name="type-energy" value="networking">
 							<label for="network">Сетевые</label>
 						</li>
 					</ul>
@@ -129,40 +129,25 @@
 		</section>
 
 		<section>
-			<h2 class="visually-hidden">Форма сортировки товара</h2>
+			<h2>Сортировка:</h2>
 
-			<form action="https://echo.htmlacademy.ru" method="post">
-				<fieldset>
-					<legend>Сортировка:</legend>
-					<ul>
-						<li>
-							<input type="radio" id="price" name="По цене" checked>
-							<label for="price">По цене</label>
-						</li>
-						<li>
-							<input type="radio" id="type" name="По типу">
-							<label for="type">По типу</label>
-						</li>
-						<li>
-							<input type="radio" id="functional" name="По функционалу">
-							<label for="functional">По функционалу</label>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<label aria-label="Сортировка цены по возрастанию">
-								<input type="radio" name="Сортировать по возрастанию цены" checked>
-							</label>
-						</li>
-						<li>
-							<label aria-label="Сортировка цены по убыванию">
-								<input type="radio" name="Сортировать по убыванию цены">
-							</label>
-						</li>
-					</ul>
-				</fieldset>
-				<button type="submit" aria-label="Отправка параметров сортировки">Отправить</button>
-			</form>
+			<ul>
+				<li>
+					<a href="">По цене</a>
+				</li>
+				<li>
+					<a href="">По типу</a>
+				</li>
+				<li>
+					<a href="">По функционалу</a>
+				</li>
+				<li>
+					<a href="" aria-label="Сортировка цены по возрастанию">Сортировка цены по возрастанию</a>
+				</li>
+				<li>
+					<a href="" aria-label="Сортировка цены по убыванию">Сортировка цены по убыванию</a>
+				</li>
+			</ul>
 		</section>
 
 		<section>
@@ -173,7 +158,7 @@
 						<a href="">Перфоратор BOSCH BFG 3000</a>
 					</h3>
 					<p>
-						<img src="/img/perforator-2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+						<img src="./img/perforator-2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
 						<a href="">Купить</a>
 						<a href="">В закладки</a>
 					</p>
@@ -185,7 +170,7 @@
 						<a href="">Перфоратор BOSCH BFG 6000</a>
 					</h3>
 					<p>
-						<img src="/img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+						<img src="./img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
 						<a href="">Купить</a>
 						<a href="">В закладки</a>
 					</p>
@@ -198,7 +183,7 @@
 						<a href="">Перфоратор BOSCH BFG 2000</a>
 					</h3>
 					<p>
-						<img src="/img/perforator-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+						<img src="./img/perforator-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
 						<a href="">Купить</a>
 						<a href="">В закладки</a>
 					</p>
@@ -237,7 +222,7 @@
 
 	<footer>
 		<p>
-			<img src="/img/logo.svg" width="220" height="47" alt="Магазин «Техномарт»">
+			<img src="./img/logo.svg" width="220" height="47" alt="Магазин «Техномарт»">
 		</p>
 		<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
 			+7 (812) 555-05-55
