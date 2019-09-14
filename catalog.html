@@ -10,7 +10,7 @@
 
 	<header>
 		<a href="index.html">
-			<img src="img/logo.svg" width="220" height="47" alt="Магазин «Техномарт»">
+			<img src="/img/logo.svg" width="220" height="47" alt="Магазин «Техномарт»">
 		</a>
 		<p>
 			Интернет-магазин <br>
@@ -33,7 +33,10 @@
 		</nav>
 		<ul>
 			<li>
-				Поиск:
+				<form action="https://echo.htmlacademy.ru" method="get">
+					<label for="search">Поиск:</label>
+					<input type="text" id="search" placeholder="Поиск:">
+				</form>
 			</li>
 			<li>
 				<a href="">Закладки: <span>0</span></a>
@@ -70,31 +73,107 @@
 		</ul>
 
 		<section>
-			<h2>Фильтр</h2>
-			<!--Форма-->
-			<span>Производители:</span>
-			<span>Bosch</span>
-			<span>Интерскол</span>
-			<span>Makita</span>
-			<span>Dewalt</span>
-			<span>Hitachi</span>
-			<span>Питание:</span>
-			<span>Аккумуляторные</span>
-			<span>Сетевые</span>
-			<button type="button">Показать</button>
+			<h2>Фильтр:</h2>
+			<form action="https://echo.htmlacademy.ru" method="post">
+				<fieldset>
+					<legend>Цена:</legend>
+					<p>
+						<input type="range" aria-label="С помощью ползунка задайте цену на перфораторы" min="0" max="30000" value="25000">
+					</p>
+					<p>
+						<input type="number" aria-label="Задайте начальное значение цены в поле" min="0" max="30000" value="0">
+						<span>&mdash;</span>
+						<input type="number" aria-label="Задайте конечное значение цены в поле" min="0" max="30000" value="30000">
+					</p>
+				</fieldset>
+				<fieldset>
+					<legend>Производители:</legend>
+					<ul>
+						<li>
+							<input type="checkbox" id="bosch" name="Bosch" checked>
+							<label for="bosch">Bosch</label>
+						</li>
+						<li>
+							<input type="checkbox" id="interskol" name="Interskol">
+							<label for="interskol">Interskol</label>
+						</li>
+						<li>
+							<input type="checkbox" id="makita" name="Makita" checked>
+							<label for="makita">Makita</label>
+						</li>
+						<li>
+							<input type="checkbox" id="dewalt" name="DeWalt">
+							<label for="dewalt">DeWalt</label>
+						</li>
+						<li>
+							<input type="checkbox" id="hitachi" name="Hitachi">
+							<label for="hitachi">Hitachi</label>
+						</li>
+					</ul>
+				</fieldset>
+				<fieldset>
+					<legend>Питание:</legend>
+					<ul>
+						<li>
+							<input type="radio" id="akkum" name="Аккумуляторные" checked>
+							<label for="akkum">Аккумуляторные</label>
+						</li>
+						<li>
+							<input type="radio" id="network" name="Сетевые">
+							<label for="network">Сетевые</label>
+						</li>
+					</ul>
+				</fieldset>
+				<button type="submit">Показать</button>
+			</form>
 		</section>
 
 		<section>
-			<!--Форма-->
+			<h2 class="visually-hidden">Форма сортировки товара</h2>
+
+			<form action="https://echo.htmlacademy.ru" method="post">
+				<fieldset>
+					<legend>Сортировка:</legend>
+					<ul>
+						<li>
+							<input type="radio" id="price" name="По цене" checked>
+							<label for="price">По цене</label>
+						</li>
+						<li>
+							<input type="radio" id="type" name="По типу">
+							<label for="type">По типу</label>
+						</li>
+						<li>
+							<input type="radio" id="functional" name="По функционалу">
+							<label for="functional">По функционалу</label>
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<label aria-label="Сортировка цены по возрастанию">
+								<input type="radio" name="Сортировать по возрастанию цены" checked>
+							</label>
+						</li>
+						<li>
+							<label aria-label="Сортировка цены по убыванию">
+								<input type="radio" name="Сортировать по убыванию цены">
+							</label>
+						</li>
+					</ul>
+				</fieldset>
+				<button type="submit" aria-label="Отправка параметров сортировки">Отправить</button>
+			</form>
+		</section>
+
+		<section>
+			<h2 class="visually-hidden">Каталог перфораторов</h2>
 			<ul>
 				<li>
 					<h3>
-						<a href="">
-							<span>Перфоратор BOSCH BFG 3000</span>
-						</a>
+						<a href="">Перфоратор BOSCH BFG 3000</a>
 					</h3>
 					<p>
-						<img src="img/perforator-2.jpg" width="220" height="170" alt="Перфоратор BOSCH BFG 3000">
+						<img src="/img/perforator-2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
 						<a href="">Купить</a>
 						<a href="">В закладки</a>
 					</p>
@@ -103,12 +182,10 @@
 				</li>
 				<li>
 					<h3>
-						<a href="">
-							<span>Перфоратор BOSCH BFG 6000</span>
-						</a>
+						<a href="">Перфоратор BOSCH BFG 6000</a>
 					</h3>
 					<p>
-						<img src="img/perforator-3.jpg" width="220" height="170" alt="Перфоратор BOSCH BFG 6000">
+						<img src="/img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
 						<a href="">Купить</a>
 						<a href="">В закладки</a>
 					</p>
@@ -118,12 +195,10 @@
 				<li>
 					<span>new</span>
 					<h3>
-						<a href="">
-							<span>Перфоратор BOSCH BFG 2000</span>
-						</a>
+						<a href="">Перфоратор BOSCH BFG 2000</a>
 					</h3>
 					<p>
-						<img src="img/perforator-4.jpg" width="220" height="170" alt="Перфоратор BOSCH BFG 2000">
+						<img src="/img/perforator-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
 						<a href="">Купить</a>
 						<a href="">В закладки</a>
 					</p>
@@ -131,11 +206,38 @@
 				</li>
 			</ul>
 		</section>
+
+		<section>
+			<h2 class="visually-hidden">Пагинация</h2>
+			<ul>
+				<li>
+					<a href="" aria-label="Первая страница отсортированных товаров">1</a>
+				</li>
+				<li>
+					<a href="" aria-label="Вторая страница отсортированных товаров">2</a>
+				</li>
+				<li>
+					<a href="" aria-label="Третья страница отсортированных товаров">3</a>
+				</li>
+				<li>
+					<a href="" aria-label="Переход на последующие страницы списка отсортированных товаров">Следующая</a>
+				</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2 class="visually-hidden">Описание вида товаров</h2>
+			<h3>Пара слов о перфораторах</h3>
+			<p>
+				Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
+				Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+			</p>
+		</section>
 	</main>
 
 	<footer>
 		<p>
-			<img src="img/logo.svg" width="220" height="47" alt="Магазин «Техномарт»">
+			<img src="/img/logo.svg" width="220" height="47" alt="Магазин «Техномарт»">
 		</p>
 		<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
 			+7 (812) 555-05-55
@@ -154,17 +256,17 @@
 			<li><a href="">Спецпредложения</a></li>
 		</ul>
 		<ul>
-			<li><a href="">Вконтакте</a></li>
-			<li><a href="">Facebook</a></li>
-			<li><a href="">Instagram</a></li>
+			<li><a href="" aria-label="Магазин «Техномарт» во Вконтакте">Вконтакте</a></li>
+			<li><a href="" aria-label="Магазин «Техномарт» на Facebook">Facebook</a></li>
+			<li><a href="" aria-label="Магазин «Техномарт» в Instagram">Instagram</a></li>
 		</ul>
 		<p>
 			Обратная связь: <br>
-			<a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+			<a href="mailto:mail@htmlacademy.ru" aria-label="Адрес электронной почты магазина «Техномарт»">mail@htmlacademy.ru</a>
 		</p>
 		<p>
 			Разработано &mdash; <br>
-			<a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+			<a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTMLAcademy - разработчики сайта магазина «Техномарт»">htmlacademy.ru</a>
 		</p>
 		<p>
 			&copy; 2010&ndash;2019 Компания «Техномарт» <br>
@@ -172,6 +274,15 @@
 		</p>
 	</footer>
 
+	<section>
+		<h2 class="visually-hidden">Модальное окно добавления в корзину</h2>
+		<p>Товар успешно добавлен в корзину!</p>
+		<p>
+			<a href="">Оформить заказ</a>
+			<a href="">Продолжить покупки</a>
+		</p>
+		<button type="button" aria-label="Закрыть модальное окно">x</button>
+	</section>
 
 </body>
 
