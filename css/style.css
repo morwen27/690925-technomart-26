@@ -1,0 +1,138 @@
+/* Порядок групп свойств:
+1. Позиционирование
+2. Блочная модель
+3. Типографика
+4. Оформление
+5. Анимация
+6. Разное 
+*/
+
+html {
+	box-sizing: border-box;
+}
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+body {
+	margin: 0;
+	padding: 0;
+	
+	font-family: "Cuprum", "PT Sans", Arial, sans-serif;
+	font-size: 17px;
+	line-height: 18px;
+	font-weight: 400;
+	color: #000000;
+	
+	background-color: #f1f5f7;
+}
+
+a {
+	text-decoration: none;
+}
+img {
+	max-width: 100%
+}
+ul {
+	list-style: none;
+}
+
+/*Хедер*/
+.header-logo {
+	width: 220px;
+	height: 42px;
+	
+	text-align: center;	
+	
+	background-color: #ee3643;
+	border-bottom: 5px solid #ba2732;	
+}
+.header-description {
+	font-size: 16px;
+	line-height: 23px;
+	font-style: italic;
+	
+	color: #ee3643;
+}
+.header-contacts {	
+	font-size: 14px;
+	line-height: 24px;
+	
+	color: #32425c;
+}
+.header-contacts a {	
+	font-size: 21px;
+	line-height: 21px;
+	
+	color: #e9292a;	
+	border: 3px solid #ffffff;
+}
+nav.navigation {	
+	background-color: #32425c;
+	border-bottom: 5px solid #1d2739;
+}
+.navigation a {
+	font-size: 17px;
+	line-height: 17px;
+	
+	color: #ffffff;
+}
+.header-menu a:hover,
+.header-menu a:active {
+	background-color: #1d2739;
+}
+.header-menu a:active {
+	color:rgba(255, 255, 255, 0.5);
+}
+.header-second-menu {
+	
+}
+.header-second-menu {
+	font-size: inherit;
+	
+	color: #ffffff;
+	background-color: #293449;	
+}
+.header-second-menu a {
+	color: #ffffff;
+}
+
+.search form::before {
+	content: url("/img/icon-search.svg");
+	color: #ffffff;
+	opacity: 0.3;
+}
+.bookmark a::before {
+	content: url("/img/icon-bookmark.svg");
+	color: #ffffff;
+	opacity: 0.3;
+}
+.cart a::before {
+	content: url("/img/icon-cart.svg");
+	color: #ffffff;
+	opacity: 0.3;
+}
+.header-second-menu a:hover {
+	color: #ffffff; /*для псевдоэлементов, которые в покое серые*/
+}
+.order a {
+	background-color: #63a63e;	
+}
+.order a:hover {
+	background-color: #5fbb2d;	
+}
+.order a:active {
+	color: rgba(255, 255, 255, 0.5);
+	background-color: #518534;	
+}
+.bookmark a:active,
+.cart a:active {
+	color: rgba(255, 255, 255, 0.6);
+	background-color: #161d29;
+}
+input {
+	
+}
+input:focus {
+	color: #000000;
+	background-color: #ffffff;
+}

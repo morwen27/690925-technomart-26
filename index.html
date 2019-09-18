@@ -4,23 +4,30 @@
 <head>
 	<meta charset="utf-8">
 	<title>HTML Academy: Техномарт</title>
+	<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
+	<link href="/css/css/normalize.css" rel="stylesheet">
+	<link href="/css/style.css" rel="stylesheet">
 </head>
 
 <body>
 
 	<header>
-		<a href="">
-			<img src="./img/logo.svg" width="220" height="47" alt="Магазин «Техномарт»">
-		</a>
-		<p>
+		<p class="header-logo">
+			<a href="">
+				<img src="./img/logo.svg" width="109" height="19" alt="Магазин «Техномарт»">
+			</a>
+		</p>
+		<p class="header-description">
 			Интернет-магазин <br>
 			строительных материалов <br>
 			и инструментов для ремонта
 		</p>
-		<p><a href="tel:78125550555">+7 (812) 555-05-55</a> <br>
-			г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
-		<nav>
-			<ul>
+		<p class="header-contacts">
+			<a href="tel:78125550555">+7 (812) 555-05-55</a> <br>
+			г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+		</p>
+		<nav class="navigation">
+			<ul class="header-menu">
 				<li><a href="">Главная</a></li>
 				<li><a href="">Компания</a></li>
 				<li><a href="catalog.html">Каталог</a></li>
@@ -30,29 +37,30 @@
 				<li><a href="">Контакты</a></li>
 			</ul>
 		</nav>
-		<ul>
-			<li>
+		<ul class="header-second-menu">
+			<li class="search">
+			<span></span>
 				<form action="https://echo.htmlacademy.ru" method="get">
-					<label for="search">Поиск:</label>
-					<input type="text" id="search" placeholder="Поиск:">
+					<label for="search-field"></label>
+					<input type="text" id="search-field" placeholder="Поиск:" aria-label="Поле ввода поисковых запросов">
 				</form>
 			</li>
-			<li>
+			<li class="bookmark">
 				<a href="">Закладки: <span>0</span></a>
 			</li>
-			<li>
+			<li class="cart">
 				<a href="">Корзина: <span>0</span></a>
 			</li>
-			<li>
+			<li class="order">
 				<a href="">Оформить заказ</a>
 			</li>
 		</ul>
-		<ul>
+		<ul class="user-navigation">
 			<li>
-				<a href="#">Войти</a>
+				<a class="login-link" href="#">Войти</a>
 			</li>
 			<li>
-				<a href="#">Регистрация</a>
+				<a class="sign-up" href="#">Регистрация</a>
 			</li>
 		</ul>
 	</header>
@@ -359,11 +367,11 @@
 		<form action="https://echo.htmlacademy.ru" method="post">
 			<p>
 				<label for="field-for-name">Ваше имя:</label>
-					<input id="field-for-name" type="text" name="Name" placeholder="Имя Фамилия">				
+				<input id="field-for-name" type="text" name="Name" placeholder="Имя Фамилия">
 			</p>
 			<p>
 				<label for="field-for-mail">Ваш e-mail:</label>
-					<input id="field-for-mail" type="email" name="E-mail" placeholder="email@example.com">				
+				<input id="field-for-mail" type="email" name="E-mail" placeholder="email@example.com">
 			</p>
 			<p>
 				<label for="field-for-message">Текст письма:</label>
