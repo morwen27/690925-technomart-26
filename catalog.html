@@ -12,19 +12,22 @@
 <body>
 
 	<header>
-		<a href="index.html">
-			<img src="./img/logo.svg" width="220" height="47" alt="Магазин «Техномарт»">
-		</a>
-		<p>
+		<p class="header-logo">
+			<a href="index.html">
+				<img src="./img/logo.svg" width="109" height="19" alt="Магазин «Техномарт»">
+			</a>
+		</p>
+		<p class="header-description">
 			Интернет-магазин <br>
 			строительных материалов <br>
 			и инструментов для ремонта
 		</p>
-		<p><a href="tel:78125550555">+7 (812) 555-05-55</a> <br>
+		<p class="header-contacts">
+			<a href="tel:78125550555">+7 (812) 555-05-55</a> <br>
 			г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
 		</p>
-		<nav>
-			<ul>
+		<nav class="navigation">
+			<ul class="header-menu">
 				<li><a href="./index.html">Главная</a></li>
 				<li><a href="">Компания</a></li>
 				<li><a href="">Каталог</a></li>
@@ -34,52 +37,52 @@
 				<li><a href="">Контакты</a></li>
 			</ul>
 		</nav>
-		<ul>
-			<li>
+		<ul class="header-second-menu">
+			<li class="search">
 				<form action="https://echo.htmlacademy.ru" method="get">
 					<label for="search">Поиск:</label>
 					<input type="text" id="search" placeholder="Поиск:">
 				</form>
 			</li>
-			<li>
+			<li class="bookmark">
 				<a href="">Закладки: <span>0</span></a>
 			</li>
-			<li>
+			<li class="cart">
 				<a href="">Корзина: <span>10</span></a>
 			</li>
-			<li>
+			<li class="order">
 				<a href="">Оформить заказ</a>
 			</li>
 		</ul>
-		<ul>
+		<ul class="user-navigation authorized">
 			<li>
-				<a href="#">Равшан Джамшутович</a>
-				<a href="#">Выход</a>
+				<a class="user-name" href="#">Равшан Джамшутович</a>
+				<a class="link-out" href="#">Выход</a>
 				<!--Иконка выхода-->
 			</li>
 			<li>
-				<a href="#">Мои заказы</a>
+				<a class="my-orders" href="#">Мои заказы</a>
 			</li>
 			<li>
-				<a href="#">Личный кабинет</a>
+				<a class="my-profile" href="#">Личный кабинет</a>
 			</li>
 		</ul>
 	</header>
 
 	<main>
 		<h1>Перфораторы</h1>
-		<ul>
-			<li><a href="./index.html">Главная</a></li>
-			<li><a href="./catalog.html">Каталог</a></li>
-			<li><a href="#">Инструмент</a></li>
-			<li><a href="./catalog.html">Перфораторы</a></li>
+		<ul class="breadcrumbs">
+			<li class="breadcrumbs-item"><a href="./index.html">Главная</a></li>
+			<li class="breadcrumbs-item"><a href="./catalog.html">Каталог</a></li>
+			<li class="breadcrumbs-item"><a href="">Инструмент</a></li>
+			<li class="breadcrumbs-item"><a href="">Перфораторы</a></li>
 		</ul>
 
-		<section>
+		<section class="filter">
 			<h2>Фильтр:</h2>
 			<form action="https://echo.htmlacademy.ru" method="post">
 				<!---<fieldset>
-					<legend>Цена:</legend>
+					<legend class="filter-title">Цена:</legend>
 					<p>
 						<input type="range" aria-label="С помощью ползунка задайте цену на перфораторы" min="0" max="30000" value="25000">
 					</p>
@@ -90,130 +93,130 @@
 					</p>
 				</fieldset>-->
 				<fieldset>
-					<legend>Производители:</legend>
-					<ul>
-						<li>
+					<legend class="filter-title">Производители:</legend>
+					<ul class="filter-manufacturers-list">
+						<li class="manufacturers-list-item">
 							<input type="checkbox" id="bosch" name="Bosch" checked>
 							<label for="bosch">Bosch</label>
 						</li>
-						<li>
+						<li class="manufacturers-list-item">
 							<input type="checkbox" id="interskol" name="Interskol">
 							<label for="interskol">Interskol</label>
 						</li>
-						<li>
+						<li class="manufacturers-list-item">
 							<input type="checkbox" id="makita" name="Makita" checked>
 							<label for="makita">Makita</label>
 						</li>
-						<li>
+						<li class="manufacturers-list-item">
 							<input type="checkbox" id="dewalt" name="DeWalt">
 							<label for="dewalt">DeWalt</label>
 						</li>
-						<li>
+						<li class="manufacturers-list-item">
 							<input type="checkbox" id="hitachi" name="Hitachi">
 							<label for="hitachi">Hitachi</label>
 						</li>
 					</ul>
 				</fieldset>
 				<fieldset>
-					<legend>Питание:</legend>
-					<ul>
-						<li>
+					<legend class="filter-title">Питание:</legend>
+					<ul class="filter-energy-list">
+						<li class="energy-list-item">
 							<input type="radio" id="akkum" name="type-energy" value="rechargeable" checked>
 							<label for="akkum">Аккумуляторные</label>
 						</li>
-						<li>
+						<li class="energy-list-item">
 							<input type="radio" id="network" name="type-energy" value="networking">
 							<label for="network">Сетевые</label>
 						</li>
 					</ul>
 				</fieldset>
-				<button type="submit">Показать</button>
+				<button class="button filter-button" type="submit">Показать</button>
 			</form>
 		</section>
 
-		<section>
+		<section class="sorting">
 			<h2>Сортировка:</h2>
 
-			<ul>
-				<li>
+			<ul class="sorting-list">
+				<li class="sorting-list-item">
 					<a href="">По цене</a>
 				</li>
-				<li>
+				<li class="sorting-list-item">
 					<a href="">По типу</a>
 				</li>
-				<li>
+				<li class="sorting-list-item">
 					<a href="">По функционалу</a>
 				</li>
-				<li>
+				<li class="sorting-list-item">
 					<a href="" aria-label="Сортировка цены по возрастанию">Сортировка цены по возрастанию</a>
 				</li>
-				<li>
+				<li class="sorting-list-item">
 					<a href="" aria-label="Сортировка цены по убыванию">Сортировка цены по убыванию</a>
 				</li>
 			</ul>
 		</section>
 
-		<section>
+		<section class="catalog">
 			<h2 class="visually-hidden">Каталог перфораторов</h2>
-			<ul>
-				<li>
-					<h3>
+			<ul class="product-list">
+				<li class="product-list-item">
+					<h3 class="product-title">
 						<a href="">Перфоратор BOSCH BFG 3000</a>
 					</h3>
-					<p>
+					<p class="product-image">
 						<img src="./img/perforator-2.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-						<a href="">Купить</a>
-						<a href="">В закладки</a>
+						<a class="to-cart" href="">Купить</a>
+						<a class="to-bookmarks" href="">В закладки</a>
 					</p>
-					<p>22500 Р.</p>
-					<p>15500 Р.</p>
+					<p class="old-price">22500 Р.</p>
+					<p class="price">15500 Р.</p>
 				</li>
-				<li>
-					<h3>
+				<li class="product-list-item">
+					<h3 class="product-title">
 						<a href="">Перфоратор BOSCH BFG 6000</a>
 					</h3>
-					<p>
+					<p class="product-image">
 						<img src="./img/perforator-3.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-						<a href="">Купить</a>
-						<a href="">В закладки</a>
+						<a class="to-cart" href="">Купить</a>
+						<a class="to-bookmarks" href="">В закладки</a>
 					</p>
-					<p>30500 Р.</p>
-					<p>25500 Р.</p>
+					<p class="old-price">30500 Р.</p>
+					<p class="price">25500 Р.</p>
 				</li>
-				<li>
-					<span>new</span>
-					<h3>
+				<li class="product-list-item">
+					<span class="new-sticker">new</span>
+					<h3 class="product-title">
 						<a href="">Перфоратор BOSCH BFG 2000</a>
 					</h3>
-					<p>
+					<p class="product-image">
 						<img src="./img/perforator-4.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-						<a href="">Купить</a>
-						<a href="">В закладки</a>
+						<a class="to-cart" href="">Купить</a>
+						<a class="to-bookmarks" href="">В закладки</a>
 					</p>
-					<p>25500 Р.</p>
+					<p class="price">25500 Р.</p>
 				</li>
 			</ul>
 		</section>
 
-		<section>
+		<section class="pagination">
 			<h2 class="visually-hidden">Пагинация</h2>
-			<ul>
-				<li>
+			<ul class="page-list">
+				<li class="page-number">
 					<a href="" aria-label="Первая страница отсортированных товаров">1</a>
 				</li>
-				<li>
+				<li class="page-number">
 					<a href="" aria-label="Вторая страница отсортированных товаров">2</a>
 				</li>
-				<li>
+				<li class="page-number">
 					<a href="" aria-label="Третья страница отсортированных товаров">3</a>
 				</li>
-				<li>
+				<li class="page-number">
 					<a href="" aria-label="Переход на последующие страницы списка отсортированных товаров">Следующая</a>
 				</li>
 			</ul>
 		</section>
 
-		<section>
+		<section class="about-products">
 			<h2 class="visually-hidden">Описание вида товаров</h2>
 			<h3>Пара слов о перфораторах</h3>
 			<p>
@@ -223,53 +226,60 @@
 		</section>
 	</main>
 
-	<footer>
-		<p>
-			<img src="./img/logo.svg" width="220" height="47" alt="Магазин «Техномарт»">
+	<footer class="main-footer">
+		<p class="footer-logo">
+			<img src="./img/logo.svg" width="109" height="19" alt="Магазин «Техномарт»">
 		</p>
-		<p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+		<p class="footer-contacts">
+			г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
 			+7 (812) 555-05-55
 		</p>
-		<ul>
+		<ul class="footer-first-menu">
 			<li><a href="">Компания</a></li>
 			<li><a href="">Новости</a></li>
 			<li><a href="catalog.html">Каталог</a></li>
 			<li><a href="">Доставка</a></li>
 			<li><a href="">Контакты</a></li>
 		</ul>
-		<ul>
+		<ul class="footer-second-menu">
 			<li><a href="">Материалы</a></li>
 			<li><a href="">Техника</a></li>
 			<li><a href="">Инструмент</a></li>
 			<li><a href="">Спецпредложения</a></li>
 		</ul>
-		<ul>
-			<li><a href="" aria-label="Магазин «Техномарт» во Вконтакте">Вконтакте</a></li>
-			<li><a href="" aria-label="Магазин «Техномарт» на Facebook">Facebook</a></li>
-			<li><a href="" aria-label="Магазин «Техномарт» в Instagram">Instagram</a></li>
+		<ul class="socail-list">
+			<li class="socail-list-item">
+				<a href="" aria-label="Магазин «Техномарт» во Вконтакте">Вконтакте</a>
+			</li>
+			<li class="socail-list-item">
+				<a href="" aria-label="Магазин «Техномарт» на Facebook">Facebook</a>
+			</li>
+			<li class="socail-list-item">
+				<a href="" aria-label="Магазин «Техномарт» в Instagram">Instagram</a>
+			</li>
 		</ul>
-		<p>
+		<p class="feedback">
 			Обратная связь: <br>
 			<a href="mailto:mail@htmlacademy.ru" aria-label="Адрес электронной почты магазина «Техномарт»">mail@htmlacademy.ru</a>
 		</p>
-		<p>
+		<p class="developer">
 			Разработано &mdash; <br>
 			<a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTMLAcademy - разработчики сайта магазина «Техномарт»">htmlacademy.ru</a>
 		</p>
-		<p>
+		<p class="copyright">
 			&copy; 2010&ndash;2019 Компания «Техномарт» <br>
 			Все права защищены
 		</p>
 	</footer>
 
-	<section>
+	<section class="modal-to-cart">
 		<h2 class="visually-hidden">Модальное окно добавления в корзину</h2>
 		<p>Товар успешно добавлен в корзину!</p>
 		<p>
-			<a href="">Оформить заказ</a>
-			<a href="">Продолжить покупки</a>
+			<a class="button modal-button" href="">Оформить заказ</a>
+			<a class="button modal-button" href="">Продолжить покупки</a>
 		</p>
-		<button type="button" aria-label="Закрыть модальное окно">x</button>
+		<button class="button close-button" type="button" aria-label="Закрыть модальное окно">x</button>
 	</section>
 
 </body>
