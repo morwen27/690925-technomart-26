@@ -51,13 +51,10 @@ h2 {
 	font-weight: 400;
 
 	text-transform: uppercase;
-	text-align: left;	
+	text-align: left;
 }
 
-p {
-	margin-bottom: 36px;
-	
-	font-family: "PTSans", "Arial", sans-serif;
+p {	
 	font-size: 12px;
 	line-height: 24px;
 }
@@ -133,6 +130,7 @@ nav.navigation {
 	margin: 0;
 	padding: 0;
 }
+
 .header-menu a:hover,
 .header-menu li:hover,
 .header-menu a:active {
@@ -142,6 +140,7 @@ nav.navigation {
 .header-menu a:active {
 	color: rgba(255, 255, 255, 0.5);
 }
+
 /*Второе меню в состоянии покоя*/
 .header-second-menu {
 	display: flex;
@@ -229,6 +228,7 @@ nav.navigation {
 
 .main-header div {
 	display: flex;
+	justify-content: space-between;
 }
 
 .navigation {
@@ -242,13 +242,29 @@ nav.navigation {
 	width: 940px;
 	height: 55px;
 }
+
 /*Кнопки авторизации*/
+.user-navigation {
+	display: flex;
+	align-items: center;
+}
 .user-navigation a {
+	display: inline-block;	
+	width: 100%;
+	padding: 15px;
+	
 	font-size: 21px;
 	line-height: 21px;
+	padding: 15px;
 
 	color: inherit;
 	background-color: #ffffff;
+}
+.login-link::before {
+	content: url("/img/icon-login.svg");
+	width: 20px;
+	height: 17px;
+	color: #c5c5c5;
 }
 
 .user-navigation a:hover {
@@ -259,7 +275,23 @@ nav.navigation {
 	color: rgba(0, 0, 0, 0.3);
 	background-color: #ffffff;
 }
-
+.user-name {
+	font-family: inherit;
+	font-size: 21px;
+	line-height: 21px;
+}
+.user-name::before {
+	content: url("/img/icon-user.svg");
+	color: #c5c5c5;
+	width: 20px;
+	height: 17px;
+}
+.link-out::after {
+	content: url("/img/icon-logout.svg");
+	color: #c5c5c5;
+	width: 20px;
+	height: 17px;
+}
 /*О компании и контакты*/
 .company-description {
 	display: flex;
@@ -267,11 +299,18 @@ nav.navigation {
 	justify-content: space-between;
 	margin: 80px 130px;
 }
+
 .company-description div:first-child {
 	width: 520px;
 }
+
 .company-description div:nth-child(2) {
 	width: 300px;
+}
+.company-description p {
+	font-family: "PTSans", "Arial", sans-serif;
+	
+	margin-bottom: 36px;
 }
 .delievery-list ul {
 	margin: none;
@@ -281,9 +320,11 @@ nav.navigation {
 	font-size: 18px;
 	line-height: 20px;
 }
+
 .delievery-list li::before {
 	content: url("/img/red-think-line.png");
 }
+
 a.about-button {
 	display: block;
 
@@ -330,22 +371,43 @@ a.button:active {
 .main-footer {
 	display: flex;
 	flex-direction: column;
+	max-height: 300px;
 
 	color: #ffffff;
 	background-color: #32425c;
 }
+
 .main-footer div:first-child,
 .main-footer div:nth-child(2) {
+	display: flex;
+	justify-content: space-between;
 	margin: 0px 130px;
 }
 
+.main-footer div:first-child {
+	height: 100px;
+}
+
+.main-footer div:nth-child(2) {
+	height: 125px;
+}
+
+.main-footer div:nth-child(3) {
+	display: flex;
+	justify-content: space-around;
+
+	background-color: #293449;
+}
+
 .footer-contacts {
+	font-family: inherit;
 	font-size: 18px;
 	line-height: 24px;
 }
 
-.footer-first-menu,
-.footer-second-menu {
+.footer-first-menu li,
+.footer-second-menu li {
+	display: inline-block;
 	font-size: 18px;
 	line-height: 24px;
 }
@@ -373,14 +435,16 @@ a.button:active {
 	color: rgba(255, 209, 128, 0.5);
 }
 
-.main-footer div:nth-child(3) {
-	background-color: #293449;
+.socail-list {
+	padding: 0px;
 }
 
 .socail-list li {
-	display: block;
+	display: inline-block;
 	width: 35px;
 	height: 30px;
+
+	vertical-align: bottom;
 
 	background-color: #212a3a;
 	border-radius: 50%;
@@ -404,7 +468,9 @@ a.button:active {
 }
 
 .feedback,
-.developer {
+.developer,
+.copyright {
+	font-family: inherit;
 	font-size: 16px;
 	line-height: 18px;
 }
@@ -419,16 +485,38 @@ a.button:active {
 	color: #ee3643;
 }
 
-.copyright {
-	font-size: 16px;
-	line-height: 18px;
+.footer-logo {
+	height: 68px;
+	display: inline-block;
 }
 
 .footer-logo {
-	height: 68px;
-	align-self: flex-start;
-}
-.footer-logo a {
-    padding: 20px 31px;
+	display: block;
+	padding: 20px 31px;
 }
 
+.footer-first-menu li {
+	display: inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-header,
+.header-second-menu,
+.main-header div,
+.header-menu,
+.user-navigation,
+.company-description div,
+.main-footer div {
+	outline: 1px solid green;
+}
