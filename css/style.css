@@ -9,9 +9,7 @@
 
 html {
 	box-sizing: border-box;
-
 }
-
 *,
 *::before,
 *::after {
@@ -19,7 +17,7 @@ html {
 }
 
 body {
-	max-width: 1200px;
+	min-width: 960px;
 	margin: 0 auto;
 	padding: 0;
 
@@ -88,15 +86,6 @@ fieldset {
 }
 
 /*Хедер*/
-.main-header {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	min-height: 320px;
-
-	background-color: #f4f7f9;
-}
-
 .header-logo,
 .footer-logo {
 	width: 220px;
@@ -179,21 +168,12 @@ nav.navigation {
 }
 
 /*Второе меню в состоянии покоя*/
-.header-second-menu {
-	display: flex;
-	justify-content: space-between;
-	height: 42px;
 
-	font-size: inherit;
 
-	color: #ffffff;
-	background-color: #293449;
-}
-
-.header-second-menu,
-.main-header div {
+/*.header-second-menu,
+.main-header .header-info {
 	padding: 0px 130px;
-}
+}*/
 
 .header-second-menu li {
 	display: inline-block;
@@ -211,9 +191,8 @@ nav.navigation {
 }
 
 .search input {
-	width: 270px;
-	height: 42px;
-	padding-left: 48px;
+	width: 220px;
+	height: 42px;	
 
 	font-family: inherit;
 	font-size: inherit;
@@ -234,10 +213,12 @@ nav.navigation {
 .order a {
 	background-color: #63a63e;
 }
-
-.search input::before {
-	content: url("/img/icon-search.svg");
-	color: #ffffff;
+.search label {
+	padding: 10px 15px;
+}
+.search label::after {
+    content: url("/img/icon-search.svg");
+    color: #6a7180;    
 }
 
 .bookmark a::before {
@@ -270,6 +251,9 @@ nav.navigation {
 .order a:hover {
 	background-color: #5fbb2d;
 }
+.search label:hover {
+	background-color: #212a3a;
+}
 
 /*Второе меню при клике*/
 .header-second-menu a:active {
@@ -291,30 +275,12 @@ nav.navigation {
 	background-color: #ffffff;
 	border-color: #ffffff;
 }
-
-.main-header div {
-	display: flex;
-	justify-content: space-between;
+.search label:active::after {   
+    color: #ee3643;   
 }
-
-.navigation {
-	margin: 0px 130px 60px 130px;
+.search label:active {   
+    background-color: #ffffff;
 }
-
-.header-menu {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	width: 940px;
-	height: 55px;
-}
-
-/*Кнопки авторизации*/
-.user-navigation {
-	display: flex;
-	align-items: center;
-}
-
 .user-navigation a {
 	display: inline-block;
 	padding: 15px;
@@ -331,14 +297,6 @@ nav.navigation {
 	height: 17px;
 	color: #c5c5c5;
 }
-
-.authorized {
-	display: flex;
-	flex-basis: 299px;
-	flex-direction: row;
-	flex-wrap: wrap;
-}
-
 .user-navigation a:hover {
 	color: #ee3643;
 }
@@ -381,25 +339,8 @@ nav.navigation {
 	height: 17px;
 }
 
-.catalog-page main {
-	padding: 0px 130px;
-}
 
 /*О компании и контакты*/
-.company-description {
-	display: flex;
-	align-content: flex-start;
-	justify-content: space-between;
-	margin: 80px 130px;
-}
-
-.company-description div:first-child {
-	width: 520px;
-}
-
-.company-description div:nth-child(2) {
-	width: 300px;
-}
 
 .company-description p {
 	font-family: "PT Sans", "Arial", sans-serif;
@@ -463,21 +404,6 @@ a.button:active {
 }
 
 /*Футер*/
-.main-footer {
-	display: flex;
-	flex-direction: column;
-	max-height: 300px;
-
-	color: #ffffff;
-	background-color: #32425c;
-}
-
-.main-footer div:first-child,
-.main-footer div:nth-child(2) {
-	display: flex;
-	justify-content: space-between;
-	margin: 0px 130px;
-}
 
 .main-footer div:first-child {
 	height: 100px;
@@ -485,13 +411,6 @@ a.button:active {
 
 .main-footer div:nth-child(2) {
 	height: 125px;
-}
-
-.main-footer div:nth-child(3) {
-	display: flex;
-	justify-content: space-around;
-
-	background-color: #293449;
 }
 
 .footer-contacts {
@@ -767,20 +686,20 @@ a.button:active {
 	color: #ee3643;
 }
 
-.sorting-list-up a::before {
-	content: url("/img/icon-up-dir.svg");
-	width: 11px;
-	height: 10px;
-
-	color: #ee3643;
+.triangle-up {
+	width: 0px;
+	height: 0px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-bottom: 11px solid #ee3643;
 }
 
-.sorting-list-down a::before {
-	content: url("/img/icon-down-dir.svg");
-	width: 11px;
-	height: 10px;
-
-	color: #c5c5c5;
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 11px solid #c5c5c5;
 }
 
 .sorting-list a:hover {
@@ -788,33 +707,24 @@ a.button:active {
 	color: #000000;
 }
 
-.sorting-list-up a:hover::before,
-.sorting-list-down a:hover::before {
-	color: #000000;
-	border-bottom: none;
+ .triangle-up:hover {
+	border-bottom-color: #000000;
+}
+ .triangle-down:hover {
+	border-top-color: #000000;
 }
 
-.sorting-list a:active,
-.sorting-list-up a:active::before,
-.sorting-list-down a:active::before {
-	color: #ee3643;
-	border-bottom: none;
+ .triangle-up:active {
+	border-bottom-color: #ee3643;
+}
+ .triangle-down:active {
+	border-top-color: #ee3643;
 }
 
 /*Каталог перфораторов*/
 .catalog {
 	max-width: 700px;	
 }
-
-.product-list {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
-
-	margin: 0px;
-	padding: 0px;
-}
-
 .product-list li {
 	width: 220px;
 	height: 318px;
@@ -912,7 +822,7 @@ h3.product-title {
 
 /*О каталожном продукте*/
 .about-products {
-	background-color: #f4f7f9;
+	width: 940px;
 }
 .about-products h3 {
 	font-family: inherit;
@@ -1115,29 +1025,165 @@ h3.product-title {
 .modal-map .close-button {
 	background-color: transparent;
 }
+
+
+
 /*Сетки*/
-.flex-container {
+.main-header {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-width: 960px;
+	height: 320px;
+	padding: 0px 10px;	
+
+	background-color: #f4f7f9;
+}
+.container-header-second-menu {
+	display: flex;
+	justify-content: center;
+	background-color: #293449;
+}
+.header-second-menu {
 	display: flex;
 	justify-content: space-between;
-	align-items: stretch;
+	height: 42px;
+
+	font-size: inherit;
+	color: #ffffff;
+	
 }
-.column-container {
+.container-header-info-nav {
+	display: flex;
+	align-self: center;
+	flex-direction: column;
+	justify-content: space-around;
+	width: 940px;
+	height: 278px;	
+}
+.main-header .header-info {
+	display: flex;
+	justify-content: space-between;
+	
+}
+.header-menu {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 940px;
+	height: 55px;
+}
+.user-navigation {
+	display: flex;
+	align-items: center;
+}
+.authorized {
+	display: flex;
+	flex-basis: 299px;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+.main-footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	align-content: stretch;
+	height: 300px;
+
+	color: #ffffff;
+	background-color: #32425c;
+}
+.main-footer .container-footer-logo-menu,
+.main-footer .container-footer-contacts-menu {
+	display: flex;
+	justify-content: space-between;	
+	width: 940px;	
+}
+.main-footer .container-footer-other-info {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	background-color: #293449;
+}
+.main-footer .footer-other-info {
+	display: flex;	
+	justify-content: space-between;
+	width: 940px;	
+}
+.product-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	margin: 0px;
+	padding: 0px;
+}
+.index.main-flex-container {
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.main-flex-container {
+	display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.container-filter-catalog {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-self: center;
+	width: 940px;
+}
+.container-about-product {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f7f9;
+}
+.container-filter-catalog-1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.container-filter-catalog-2 {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
-
+.company-description {
+	display: flex;
+	align-self: center;
+	align-content: flex-start;
+	justify-content: space-between;
+	
+	width: 940px;
+}
 
 
 .main-header,
 .header-second-menu,
-.main-header div,
+.header-info,
 .header-menu,
 .user-navigation,
+.company-description,
 .company-description div,
 .main-footer div,
-.flex-container, 
+.main-flex-container, 
 .column-container,
-.product-list  {
+.product-list,
+.container-header-second-menu,
+.container-header-info-nav,
+.container-footer-logo-menu,
+.container-footer-contacts-menu,
+.container-footer-other-info,
+.footer-other-info,
+.container-filter-catalog, 
+.container-about-product,
+.container-filter-catalog,
+.container-catalog-pagination
+.company-description,
+.index.main-flex-container {
 	outline: 1px solid green;
 }

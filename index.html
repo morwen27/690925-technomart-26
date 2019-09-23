@@ -5,20 +5,20 @@
 	<meta charset="utf-8">
 	<title>HTML Academy: Техномарт</title>
 	<link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,400i,700&display=swap&subset=cyrillic" rel="stylesheet">
-	<link href="/css/css/normalize.css" rel="stylesheet">
+	<link href="/css/normalize.css" rel="stylesheet">
 	<link href="/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-	<header class="main-header">
+<header class="main-header">
+	<div class="container-header-second-menu">
 		<ul class="header-second-menu">
 			<li class="header-logo">
-				<a href="">
+				<a href="index.html">
 					<img src="./img/logo.svg" width="109" height="19" alt="Магазин «Техномарт»">
 				</a>
 			</li>
 			<li class="search">
-				<span></span>
 				<form action="https://echo.htmlacademy.ru" method="get">
 					<label for="search-field"></label>
 					<input type="text" id="search-field" placeholder="Поиск:" aria-label="Поле ввода поисковых запросов">
@@ -34,7 +34,9 @@
 				<a href="">Оформить заказ</a>
 			</li>
 		</ul>
-		<div>
+	</div>
+	<div class="container-header-info-nav">
+		<div class="header-info">
 			<p class="header-description">
 				Интернет-магазин <br>
 				строительных материалов <br>
@@ -64,9 +66,10 @@
 				<li><a href="">Контакты</a></li>
 			</ul>
 		</nav>
-	</header>
+	</div>
+</header>
 
-	<main class="container">
+	<main class="index main-flex-container">
 		<h1 class="visually-hidden">Интернет-магазин «Техномарт»</h1>
 
 		<section class="features">
@@ -323,7 +326,7 @@
 	</main>
 
 	<footer class="main-footer">
-		<div>
+		<div class="container-footer-logo-menu">
 			<a class="footer-logo" href="">
 				<img src="./img/logo.svg" width="138" height="23" alt="Магазин «Техномарт»">
 			</a>
@@ -335,7 +338,7 @@
 				<li><a href="">Контакты</a></li>
 			</ul>
 		</div>
-		<div>
+		<div class="container-footer-contacts-menu">
 			<p class="footer-contacts">
 				г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
 				+7 (812) 555-05-55
@@ -348,7 +351,8 @@
 				<li><a href="">Спецпредложения</a></li>
 			</ul>
 		</div>
-		<div>
+		<div class="container-footer-other-info">
+			<div class="footer-other-info">
 			<p class="copyright">
 				&copy; 2010&ndash;2019 Компания «Техномарт» <br>
 				Все права защищены
@@ -373,6 +377,7 @@
 				<a href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTMLAcademy - разработчики сайта магазина «Техномарт»">htmlacademy.ru</a>
 			</p>
 		</div>
+		</div>		
 	</footer>
 
 	<section class="modal-map">
