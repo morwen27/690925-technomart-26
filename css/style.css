@@ -80,19 +80,19 @@ fieldset {
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
-  position: absolute;
+	position: absolute;
 
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
 
-  white-space: nowrap;
+	white-space: nowrap;
 
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 /*Хедер*/
@@ -118,27 +118,26 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 0px;
 	margin-left: 52px;
 	margin-top: 10px;
-
 	font-size: 16px;
 	line-height: 23px;
 	font-style: italic;
-
 	color: #ee3643;
 }
 
 .header-contacts {
-	 width: 270px;
-    margin-bottom: 0px;
-    margin-top: 10px;
-    margin-left: 4px;
-	
-    font-size: 14px;
-    line-height: 24px;
+	width: 270px;
+	margin-bottom: 0px;
+	margin-top: 10px;
+	margin-left: 72px;
+	font-size: 14px;
+	line-height: 24px;
 }
+
 .header-contacts-adress {
 	display: block;
 	text-align: center;
 }
+
 .header-contacts a {
 	display: block;
 	margin-bottom: 5px;
@@ -175,32 +174,39 @@ input[type="radio"].visually-hidden {
 }
 
 .header-menu a {
-    padding-top: 19px;
-    padding-left: 30px;
-    padding-right: 31px;
-    padding-bottom: 21px;
+	padding-top: 19px;
+	padding-left: 30px;
+	padding-right: 31px;
+	padding-bottom: 21px;
 }
+
 .header-menu li:first-child a {
-    padding-left: 52px;
+	padding-left: 52px;
 }
+
 .header-menu li:nth-child(2) a {
-    padding-left: 32px;
-    padding-right: 28px;
+	padding-left: 32px;
+	padding-right: 28px;
 }
+
 .header-menu li:nth-child(4) a {
-    padding-left: 28px;
-    padding-right: 28px;
+	padding-left: 28px;
+	padding-right: 28px;
 }
+
 .header-menu li:last-child a {
-    padding-right: 54px;
+	padding-right: 54px;
 }
+
 .header-menu a:hover {
-    background-color: #293449;
+	background-color: #293449;
 }
+
 .header-menu a:active {
-    color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.5);
 	background-color: #1d2739;
 }
+
 /*Второе меню в состоянии покоя*/
 
 .header-second-menu a,
@@ -352,7 +358,6 @@ input[type="radio"].visually-hidden {
 .user-navigation a {
 	display: block;
 	vertical-align: top;
-	height: 45px;
 	font-size: 21px;
 	line-height: 21px;
 	color: inherit;
@@ -360,72 +365,126 @@ input[type="radio"].visually-hidden {
 }
 
 .login-link {
-    position: relative;
-    width: 121px;
-    padding: 12px 5px 10px 47px;
-    margin-right: 10px;
+	position: relative;
+	width: 121px;
+	padding: 12px 5px 10px 48px;
+	margin-right: 10px;
 }
 
 .login-link svg {
-    position: absolute;
-    bottom: 14px;
-    left: 14px;
-	
-    width: 20px;
-    height: 17px;
+	position: absolute;
+	bottom: 14px;
+	left: 14px;
+
+	width: 20px;
+	height: 17px;
 }
 
 .sign-up {
 	width: 150px;
-	padding: 12px 24px 10px 24px;
+	padding: 12px 24px 10px 25px;
 }
 
 .login-link:hover path,
 .login-link:hover polygon {
 	fill: #32425C;
 }
+
 .user-navigation a:hover {
 	color: #ee3643;
 }
+
 .user-navigation a:active {
 	color: rgba(0, 0, 0, 0.3);
 	background-color: #ffffff;
 }
 
-.authorized .my-orders,
-.authorized .my-profile {
-	font-size: 16px;
-	line-height: 18px;
-	padding: 0px;
-
-	background: none;
-	text-decoration: underline;
-}
-
-.authorized li:first-child {
-	width: 100%;
+.authorized .profile {
+	width: 299px;
+	height: 45px;
+	margin: 0px;
+	font-size: 21px;
+	line-height: 21px;
+	color: #000000;
 	background-color: #ffffff;
 }
 
 .authorized a {
-	background: none;
+	display: inline-block;
+	vertical-align: top;
+}
+.user-links {
+	margin: 0px;
+}
+.user-links a {
+	margin: 4px 11px 0px 18px;
+	
+    font-size: 16px;
+    color: #32425c;
+    background-color: transparent;
+    text-decoration: underline;
+    text-decoration-color: #32425c;
+}
+.user-links a:hover {
+	background-color: transparent;
+	color: #ee3643;
+	text-decoration-color: #ee3643;
+}
+.user-links a:active {
+	background-color: transparent;
+	color: rgba(50, 66, 92, 0.3);
+	text-decoration-color: rgba(50, 66, 92, 0.3);
+}
+.user-name {
+	position: relative;
+	padding: 11px 15px 13px 46px;
 }
 
-.user-name::before {
-	content: url("/img/icon-user.svg");
-	color: #c5c5c5;
+.user-name svg {
+	position: absolute;
+	top: 12px;
+	left: 13px;
 	width: 20px;
+	height: 18px;
+}
+.link-out {
+	position: relative;
+}
+.link-out svg {
+	position: absolute;
+	top: 13px;
+	left: 17px;
+	width: 21px;
 	height: 17px;
 }
-
-.link-out::after {
-	content: url("/img/icon-logout.svg");
-	color: #c5c5c5;
-	width: 20px;
-	height: 17px;
+.user-name:hover path,
+.link-out:hover path,
+.link-out:hover polygon {
+	fill: #32425C;
 }
-
-
+.user-name:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+.user-name:active path,
+.link-out:active path,
+.link-out:active polygon {
+	fill: #c5c5c5;
+}
+.my-profile {
+	position: relative;
+}
+.my-profile::before {
+	content: "";
+    position: absolute;
+    top: 9px;
+    left: -16px;
+	
+    width: 4px;
+    height: 4px;
+	
+    border-radius: 50%;
+    background-color: #32425c;
+}
 /*О компании и контакты*/
 
 .company-description p {
@@ -1180,14 +1239,13 @@ h3.product-title {
 	align-self: center;
 	flex-direction: column;
 	justify-content: flex-start;
-	
 	width: 940px;
 	height: 278px;
 }
 
 .main-header .header-info {
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	align-items: center;
 	height: 158px;
 }
@@ -1206,15 +1264,20 @@ h3.product-title {
 .user-navigation {
 	display: flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: flex-end;
 	padding-bottom: 20px;
+	margin-left: 50px;
+	width: 299px;
 }
 
 .authorized {
 	display: flex;
 	flex-basis: 299px;
 	flex-direction: row;
+	justify-content: flex-start;
 	flex-wrap: wrap;
+	padding: 0px;
+	margin-top: 9px;
 }
 
 .main-footer {
