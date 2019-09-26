@@ -413,28 +413,33 @@ input[type="radio"].visually-hidden {
 	display: inline-block;
 	vertical-align: top;
 }
+
 .user-links {
 	margin: 0px;
 }
+
 .user-links a {
 	margin: 4px 11px 0px 18px;
-	
-    font-size: 16px;
-    color: #32425c;
-    background-color: transparent;
-    text-decoration: underline;
-    text-decoration-color: #32425c;
+
+	font-size: 16px;
+	color: #32425c;
+	background-color: transparent;
+	text-decoration: underline;
+	text-decoration-color: #32425c;
 }
+
 .user-links a:hover {
 	background-color: transparent;
 	color: #ee3643;
 	text-decoration-color: #ee3643;
 }
+
 .user-links a:active {
 	background-color: transparent;
 	color: rgba(50, 66, 92, 0.3);
 	text-decoration-color: rgba(50, 66, 92, 0.3);
 }
+
 .user-name {
 	position: relative;
 	padding: 11px 15px 13px 46px;
@@ -447,9 +452,11 @@ input[type="radio"].visually-hidden {
 	width: 20px;
 	height: 18px;
 }
+
 .link-out {
 	position: relative;
 }
+
 .link-out svg {
 	position: absolute;
 	top: 13px;
@@ -457,34 +464,40 @@ input[type="radio"].visually-hidden {
 	width: 21px;
 	height: 17px;
 }
+
 .user-name:hover path,
 .link-out:hover path,
 .link-out:hover polygon {
 	fill: #32425C;
 }
+
 .user-name:active {
 	color: rgba(0, 0, 0, 0.3);
 }
+
 .user-name:active path,
 .link-out:active path,
 .link-out:active polygon {
 	fill: #c5c5c5;
 }
+
 .my-profile {
 	position: relative;
 }
+
 .my-profile::before {
 	content: "";
-    position: absolute;
-    top: 9px;
-    left: -16px;
-	
-    width: 4px;
-    height: 4px;
-	
-    border-radius: 50%;
-    background-color: #32425c;
+	position: absolute;
+	top: 9px;
+	left: -16px;
+
+	width: 4px;
+	height: 4px;
+
+	border-radius: 50%;
+	background-color: #32425c;
 }
+
 /*О компании и контакты*/
 
 .company-description p {
@@ -550,15 +563,20 @@ a.button:active {
 
 /*Футер*/
 
-.main-footer div:first-child {
-	height: 100px;
+.main-footer .container-footer-logo-menu {
+	/* height: 100px; */
 }
 
-.main-footer div:nth-child(2) {
-	height: 125px;
+.main-footer .container-footer-contacts-menu {
+	/* height: 125px; */
 }
 
 .footer-contacts {
+	margin-right: 0px;
+	margin-top: 28px;
+	margin-left: 3px;
+	margin-bottom: 49px;
+
 	font-family: inherit;
 	font-size: 18px;
 	line-height: 24px;
@@ -566,13 +584,13 @@ a.button:active {
 
 .footer-first-menu li,
 .footer-second-menu li {
-	display: inline-block;
 	font-size: 18px;
 	line-height: 24px;
 }
 
 .footer-first-menu a {
 	color: #f1f5f7;
+	padding-left: 57px;
 }
 
 .footer-first-menu a:hover,
@@ -588,6 +606,11 @@ a.button:active {
 
 .footer-second-menu a {
 	color: #ffd180;
+	padding-left: 59px;
+}
+
+.footer-second-menu li:nth-child(2) a {
+	padding-left: 60px;
 }
 
 .footer-second-menu a:active {
@@ -595,30 +618,31 @@ a.button:active {
 }
 
 .socail-list {
-	padding: 0px;
+    flex-grow: 1;
+	
+    margin: 0px;
+    padding: 0px;
+    margin-left: 44px;
+    margin-top: 4px;
+	
+    text-align: center;
 }
 
 .socail-list li {
 	display: inline-block;
-	width: 35px;
-	height: 30px;
-
+	width: 40px;
+	height: 40px;
 	vertical-align: bottom;
-
 	background-color: #212a3a;
 	border-radius: 50%;
 }
 
-.socail-vk a::after {
-	content: url("/img/vk-icon.svg");
-}
-
 .socail-fb a::after {
-	content: url("/img/fb-icon.svg");
+	content: url("./img/fb-icon.svg");
 }
 
 .socail-instagram a::after {
-	content: url("/img/insta-icon.svg");
+	content: url("./img/insta-icon.svg");
 }
 
 .socail-list li:hover,
@@ -629,9 +653,59 @@ a.button:active {
 .feedback,
 .developer,
 .copyright {
+	margin: 0;
 	font-family: inherit;
 	font-size: 16px;
 	line-height: 18px;
+}
+.developer {
+    margin-top: 3px;
+    margin-right: 14px;
+    margin-left: 52px;
+}
+
+.feedback {
+    margin-top: 3px;
+}
+.copyright {
+	margin-left: 2px;
+	margin-top: 2px;
+}
+
+.socail-vk {
+	position: relative;
+}
+
+.socail-vk svg {
+	position: absolute;
+	top: 12px;
+	left: 7px;
+	width: 26px;
+	height: 15px;
+}
+
+.socail-fb {
+	position: relative;
+}
+
+.socail-fb svg {
+	position: absolute;
+	top: 9px;
+	left: 15px;
+	width: 12px;
+	height: 22px;
+}
+
+.socail-instagram {
+	position: relative;
+}
+
+.socail-instagram svg {
+	position: absolute;
+	top: 9px;
+	left: 10px;
+	width: 21px;
+	height: 21px;
 }
 
 .feedback a,
@@ -655,7 +729,16 @@ a.button:active {
 }
 
 .footer-first-menu li {
-	display: inline-block;
+	margin-top: 31px;
+}
+
+.footer-first-menu li:nth-child(4) a {
+	padding-left: 61px;
+}
+
+.footer-first-menu li:nth-child(3) a,
+.footer-first-menu li:nth-child(2) a {
+	padding-left: 59px;
 }
 
 /*Хлебные крошки*/
@@ -1286,7 +1369,6 @@ h3.product-title {
 	align-items: center;
 	align-content: stretch;
 	height: 300px;
-
 	color: #ffffff;
 	background-color: #32425c;
 }
@@ -1298,17 +1380,37 @@ h3.product-title {
 	width: 940px;
 }
 
+.footer-first-menu {
+	display: flex;
+	justify-content: flex-end;
+	flex-wrap: wrap;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-second-menu {
+	display: flex;
+	padding: 0px;
+	margin: 0px;
+	margin-top: 28px;
+}
+
 .main-footer .container-footer-other-info {
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	height: 107px;
 	background-color: #293449;
 }
 
 .main-footer .footer-other-info {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+
 	width: 940px;
+	height: 107px;
 }
 
 .product-list {
@@ -1400,6 +1502,7 @@ h3.product-title {
 	height: 38px;
 	padding: 10px 0px;
 	margin-top: 15px;
+	vertical-align: top;
 
 	font-size: 14px;
 	line-height: 18px;
@@ -1485,6 +1588,24 @@ h3.product-title {
 	width: 620px;
 	height: 266px;
 	padding: 27px 24px;
+}
+.slider-list p {
+	margin: 0;
+	
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: 700;
+	
+	text-transform: uppercase;
+	color: #ffffff;
+}
+.slider-list span {
+	display: block;
+	
+	font-size: 18px;
+	line-height: 24px;
+
+	color: #ffffff;
 }
 
 
