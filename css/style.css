@@ -45,15 +45,14 @@ ul {
 }
 
 h1 {
-	padding: 32px 30px 34px;
+	padding: 30px 28px 32px;
+	margin: 0px;
 	font-size: 30px;
 	line-height: 30px;
 	font-weight: 400;
-
 	text-transform: uppercase;
 	text-align: left;
 	color: #32425c;
-
 	background-color: #f2f6f8;
 }
 
@@ -95,6 +94,11 @@ input[type="radio"].visually-hidden {
 	overflow: hidden;
 }
 
+.container-filter-catalog h1 {
+	height: 89px;
+	margin-bottom: 20px;
+}
+
 /*Хедер*/
 .header-logo,
 .footer-logo {
@@ -117,7 +121,7 @@ input[type="radio"].visually-hidden {
 .header-description {
 	margin-bottom: 0px;
 	margin-left: 52px;
-	margin-top: 10px;
+	margin-top: 9px;
 	font-size: 16px;
 	line-height: 23px;
 	font-style: italic;
@@ -127,7 +131,7 @@ input[type="radio"].visually-hidden {
 .header-contacts {
 	width: 270px;
 	margin-bottom: 0px;
-	margin-top: 10px;
+	margin-top: 8px;
 	margin-left: 72px;
 	font-size: 14px;
 	line-height: 24px;
@@ -140,15 +144,14 @@ input[type="radio"].visually-hidden {
 
 .header-contacts a {
 	display: block;
+	height: 45px;
 	margin-bottom: 5px;
-	padding-top: 7px;
+	padding-top: 8px;
 	padding-bottom: 8px;
 	padding-right: 0px;
 	padding-left: 52px;
-
 	font-size: 21px;
 	line-height: 21px;
-
 	color: #e9292a;
 	border: 3px solid #ffffff;
 }
@@ -173,10 +176,15 @@ input[type="radio"].visually-hidden {
 	padding: 0;
 }
 
+.header-menu li {
+	padding-top: 20px;
+}
+
 .header-menu a {
-	padding-top: 19px;
+	height: 60px;
 	padding-left: 30px;
 	padding-right: 31px;
+	padding-top: 19px;
 	padding-bottom: 21px;
 }
 
@@ -186,12 +194,12 @@ input[type="radio"].visually-hidden {
 
 .header-menu li:nth-child(2) a {
 	padding-left: 32px;
-	padding-right: 28px;
+	padding-right: 27px;
 }
 
 .header-menu li:nth-child(4) a {
 	padding-left: 28px;
-	padding-right: 28px;
+	padding-right: 29px;
 }
 
 .header-menu li:last-child a {
@@ -228,17 +236,16 @@ input[type="radio"].visually-hidden {
 	width: 270px;
 	height: 42px;
 	padding-left: 48px;
-
+	padding-top: 0px;
 	font-family: inherit;
 	font-size: inherit;
 	background-color: #293449;
 	border: none;
-
 }
 
 .search svg {
 	position: absolute;
-	top: 13px;
+	top: 12px;
 	left: 17px;
 }
 
@@ -254,19 +261,20 @@ input[type="radio"].visually-hidden {
 .order a {
 	position: relative;
 	width: 150px;
-	padding: 13px 0px 11px 44px;
+	padding: 12px 0px 11px 44px;
 }
 
 .bookmark svg {
 	position: absolute;
 	width: 14px;
 	height: 16px;
-	top: 13px;
+	top: 12px;
 	left: 17px;
 }
 
 .order a {
-	padding: 13px 0px 11px;
+	height: 42px;
+	padding: 12px 0px 11px;
 	text-align: center;
 	background-color: #63a63e;
 }
@@ -279,11 +287,12 @@ input[type="radio"].visually-hidden {
 	position: absolute;
 	width: 15px;
 	height: 15px;
-	top: 13px;
+	top: 12px;
 	left: 17px;
 }
 
 .catalog-page .cart a {
+	height: 42px;
 	background-color: #ee3643;
 }
 
@@ -304,7 +313,7 @@ input[type="radio"].visually-hidden {
 }
 
 .header-logo a {
-	padding: 14px 55px 11px;
+	padding: 13px 55px 11px 56px;
 }
 
 .bookmark:hover path {
@@ -358,6 +367,7 @@ input[type="radio"].visually-hidden {
 .user-navigation a {
 	display: block;
 	vertical-align: top;
+	height: 45px;
 	font-size: 21px;
 	line-height: 21px;
 	color: inherit;
@@ -367,22 +377,21 @@ input[type="radio"].visually-hidden {
 .login-link {
 	position: relative;
 	width: 121px;
-	padding: 12px 5px 10px 48px;
+	padding: 11px 5px 14px 48px;
 	margin-right: 10px;
 }
 
 .login-link svg {
 	position: absolute;
-	bottom: 14px;
-	left: 14px;
-
+	bottom: 16px;
+	left: 15px;
 	width: 20px;
 	height: 17px;
 }
 
 .sign-up {
 	width: 150px;
-	padding: 12px 24px 10px 25px;
+	padding: 11px 24px 12px 25px;
 }
 
 .login-link:hover path,
@@ -395,6 +404,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-navigation a:active {
+	height: 45px;
 	color: rgba(0, 0, 0, 0.3);
 	background-color: #ffffff;
 }
@@ -419,9 +429,10 @@ input[type="radio"].visually-hidden {
 }
 
 .user-links a {
-	margin: 4px 11px 0px 18px;
-
+	height: 15px;
+	margin: 6px 11px 0px 18px;
 	font-size: 16px;
+	line-height: 24px;
 	color: #32425c;
 	background-color: transparent;
 	text-decoration: underline;
@@ -442,13 +453,13 @@ input[type="radio"].visually-hidden {
 
 .user-name {
 	position: relative;
-	padding: 11px 15px 13px 46px;
+	padding: 13px 15px 13px 47px;
 }
 
 .user-name svg {
 	position: absolute;
-	top: 12px;
-	left: 13px;
+	top: 14px;
+	left: 14px;
 	width: 20px;
 	height: 18px;
 }
@@ -459,7 +470,7 @@ input[type="radio"].visually-hidden {
 
 .link-out svg {
 	position: absolute;
-	top: 13px;
+	top: 15px;
 	left: 17px;
 	width: 21px;
 	height: 17px;
@@ -490,10 +501,8 @@ input[type="radio"].visually-hidden {
 	position: absolute;
 	top: 9px;
 	left: -16px;
-
 	width: 4px;
 	height: 4px;
-
 	border-radius: 50%;
 	background-color: #32425c;
 }
@@ -618,14 +627,14 @@ a.button:active {
 }
 
 .socail-list {
-    flex-grow: 1;
-	
-    margin: 0px;
-    padding: 0px;
-    margin-left: 44px;
-    margin-top: 4px;
-	
-    text-align: center;
+	flex-grow: 1;
+
+	margin: 0px;
+	padding: 0px;
+	margin-left: 44px;
+	margin-top: 4px;
+
+	text-align: center;
 }
 
 .socail-list li {
@@ -638,11 +647,11 @@ a.button:active {
 }
 
 .socail-fb a::after {
-	content: url("./img/fb-icon.svg");
+	content: url("/img/fb-icon.svg");
 }
 
 .socail-instagram a::after {
-	content: url("./img/insta-icon.svg");
+	content: url("/img/insta-icon.svg");
 }
 
 .socail-list li:hover,
@@ -658,15 +667,17 @@ a.button:active {
 	font-size: 16px;
 	line-height: 18px;
 }
+
 .developer {
-    margin-top: 3px;
-    margin-right: 14px;
-    margin-left: 52px;
+	margin-top: 3px;
+	margin-right: 14px;
+	margin-left: 52px;
 }
 
 .feedback {
-    margin-top: 3px;
+	margin-top: 3px;
 }
+
 .copyright {
 	margin-left: 2px;
 	margin-top: 2px;
@@ -743,33 +754,52 @@ a.button:active {
 
 /*Хлебные крошки*/
 .breadcrumbs {
-	padding: 0px;
-	margin: 25px 0px 0px 0px;
-
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	height: 59px;
+	padding: 0;
+	margin: 0px;
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 18px;
 	text-transform: uppercase;
 }
 
-.breadcrumbs li {
-	display: inline-block;
-}
+.breadcrumbs li {}
 
 .breadcrumbs a {
+	display: block;
+	padding-left: 41px;
+
 	color: inherit;
+	background-image: url("/img/icon-right-small.svg");
+	background-position: 15% 51%;
+	background-repeat: no-repeat;
 }
 
-.breadcrumbs li:first-child::before {
-	content: url("/img/icon-home.svg");
+.breadcrumbs li:first-child a {
+	position: relative;
+
 	width: 14px;
 	height: 12px;
+	padding: 0px;
+
+	background-image: none;
 }
 
-.breadcrumbs li:nth-child(n+2)::before {
-	content: url("/img/icon-right-small.svg");
-	width: 8px;
-	height: 12px;
+.breadcrumbs li:first-child svg {
+	position: absolute;
+	bottom: 1px;
+	right: 1px;
+}
+
+.breadcrumbs li:nth-child(3) a {
+	padding-left: 40px;
+}
+
+.breadcrumbs li:nth-child(4) a {
+	padding-left: 43px;
 }
 
 /*Фильтры*/
@@ -782,15 +812,17 @@ a.button:active {
 .filter h2,
 .sorting h2 {
 	height: 38px;
-	padding: 10px 20px;
+	padding: 10px 19px;
 	margin-top: 0px;
-
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 13px;
 	line-height: 18px;
-
 	color: inherit;
 	background-color: #f7f3ec;
+}
+
+.filter h2 {
+	width: 220px;
 }
 
 .filter-title {
@@ -884,6 +916,9 @@ a.button:active {
 }
 
 .sorting {
+	width: 700px;
+	height: 38px;
+	margin-bottom: 20px;
 	background-color: #f7f3ec;
 }
 
@@ -957,97 +992,172 @@ a.button:active {
 	max-width: 700px;
 }
 
+.new-sticker {
+	display: block;
+	position: absolute;
+	top: -1px;
+	right: -1px;
+
+	width: 60px;
+	height: 60px;
+
+	text-indent: -1000px;
+	overflow: hidden;
+	z-index: 20;
+}
+
+.product-list-item .flag {
+	background: url("/img/new-flag.png") no-repeat 0 0;
+}
+
 .product-list li {
+	position: relative;
 	width: 220px;
 	height: 318px;
 
 	border: 1px solid #e5e5e5;
 }
 
-h3.product-title {
-	width: 155px;
-	height: 33px;
-
-	font-family: "PT Sans", "Arial", sans-serif;
-	font-size: 18px;
-	line-height: 20px;
-
-	text-align: center;
+.product-list-item {
+	margin-bottom: 20px;
 }
 
-.price,
-.old-price {
+.product-list-item .product-action {	
+	position: absolute;
+	top: 0px;
+	left: 0px;
+
+	width: 218px;
+	height: 168px;
+	padding: 43px 0px;
+
+	background-color: rgba(255, 255, 255, 0.9);
+	z-index: 10;
+}
+.product-list-item .product-action {
+	display: none;
+}
+.product-list-item:hover .product-action {
+	display: block;
+}
+
+.product-image {
+	width: 218px;
+	height: 168px;
+	margin: 0px;
+}
+
+h3.product-title {
+    min-height: 40px;
+    padding: 0 25px;
+    margin-top: 11px;
+    margin-bottom: 5px;
+	
+    font-family: "PT Sans", "Arial", sans-serif;
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.product-list-item .price,
+.product-list-item .old-price {
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-size: 17px;
-	line-height: 18px;
+	line-height: 20px;
 	font-weight: 700;
 }
 
-.old-price {
-	color: #999999;
-	text-align: center;
-	text-decoration: line-through;
+.product-list-item .old-price {
+    min-height: 20px;
+    margin: 10px 0px 0px 3px;
+    color: #999999;
+    text-align: center;
+    text-decoration: line-through;
 }
 
-.price {
+.product-list-item .price {
+	position: relative;
 	width: 141px;
 	height: 38px;
-	padding: 9px 0px;
+	margin: 0;
+	margin-left: 42px;
+	margin-top: 9px;
+	padding: 9px 0px 10px 36px;
 	color: #ffffff;
-	text-align: center;
-
-	background-image: url("/img/item-button.png");
+	background: #ee3643;
+	border-radius: 3px;
 }
 
-.to-cart,
-.to-bookmarks {
-	display: inline-block;
-	width: 135px;
-	height: 38px;
-	padding: 8px 0px;
+.product-list-item .price:after {
+	content: "";
 
-	font-family: inherit;
-	font-size: 14px;
-	line-height: 18px;
+	position: absolute;
+	top: 0;
+	right: -20px;
 
-	text-align: center;
-	text-transform: uppercase;
+	width: 0;
+	height: 0;
 
+	border: 19.1px solid white;
+	border-left-color: #ee3643;
 }
 
-.to-cart {
-	color: #ffffff;
-	background-color: #63a63e;
-	border-bottom: 3px solid #367315;
+.product-action .to-cart,
+.product-action .to-bookmarks {
+display: block;
+    width: 135px;
+    height: 38px;
+    margin: 0 auto;
+    margin-bottom: 8px;
+    padding: 8px 0px;
+    padding-left: 45px;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #63a63e;
+    border: 3px solid #63a63e;
+    border-bottom-color: #367315;
+    border-radius: 3px;
+}
+.product-action .to-cart {
+	position: relative;
 }
 
-.to-cart::before {
-	content: url("/img/icon-cart.svg");
-	width: 15px;
-	height: 15px;
-
-	color: rgba(41, 52, 73, 0.5);
+.product-action .to-cart::before {
+    content: url("/img/icon-cart.svg");
+    position: absolute;
+    top: 8px;
+    left: 11px;
+    width: 15px;
+    height: 15px;
+	
+    color: rgba(41, 52, 73, 0.5);
 }
 
-.to-cart:hover {
+.product-action .to-cart:hover {
 	background-color: #5fbb2d;
 }
 
-.to-cart:active {
+.product-action .to-cart:active {
 	background-color: #518534;
 }
 
-.to-bookmarks {
+.product-action .to-bookmarks {
+	 padding-left: 33px;
 	color: #32425c;
-	border: 3px solid #63a63e;
+	background: #ffffff;
+	border-bottom-color: #63a63e;
 }
 
-.to-bookmarks:hover {
+.product-action .to-bookmarks:hover {
 	color: #32425c;
 	border: 3px solid #32425c;
 }
 
-.to-bookmarks:active {
+.product-action .to-bookmarks:active {
 	color: rgba(50, 66, 92, 0.3);
 	border: 3px solid rgba(50, 66, 92, 0.3);
 }
@@ -1337,7 +1447,6 @@ h3.product-title {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
-	align-items: center;
 	width: 940px;
 	height: 60px;
 	background-color: #32425c;
@@ -1360,7 +1469,6 @@ h3.product-title {
 	justify-content: flex-start;
 	flex-wrap: wrap;
 	padding: 0px;
-	margin-top: 9px;
 }
 
 .main-footer {
@@ -1458,6 +1566,7 @@ h3.product-title {
 
 .container-filter-catalog-2 {
 	display: flex;
+	width: 700px;
 	flex-direction: column;
 	justify-content: space-between;
 }
@@ -1589,19 +1698,21 @@ h3.product-title {
 	height: 266px;
 	padding: 27px 24px;
 }
+
 .slider-list p {
 	margin: 0;
-	
+
 	font-size: 36px;
 	line-height: 36px;
 	font-weight: 700;
-	
+
 	text-transform: uppercase;
 	color: #ffffff;
 }
+
 .slider-list span {
 	display: block;
-	
+
 	font-size: 18px;
 	line-height: 24px;
 
