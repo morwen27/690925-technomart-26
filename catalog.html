@@ -135,50 +135,50 @@
 				<section class="filter">
 					<h2>Фильтр:</h2>
 					<form action="https://echo.htmlacademy.ru" method="post">
-						<!---<fieldset>
-					<legend class="filter-title">Цена:</legend>
-					<p>
-						<input type="range" aria-label="С помощью ползунка задайте цену на перфораторы" min="0" max="30000" value="25000">
-					</p>
-					<p>
-						<input type="number" aria-label="Задайте начальное значение цены в поле" min="0" max="30000" value="0">
-						<span>&mdash;</span>
-						<input type="number" aria-label="Задайте конечное значение цены в поле" min="0" max="30000" value="30000">
-					</p>
-				</fieldset>-->
-						<fieldset>
+						<fieldset class="set-filter-1">
+							<legend class="filter-title">Цена:</legend>
+							<p>
+								<input type="range" aria-label="С помощью ползунка задайте цену на перфораторы" min="0" max="30000" value="25000">
+							</p>
+							<p>
+								<input type="number" aria-label="Задайте начальное значение цены в поле" min="0" max="30000" value="0">
+								<span>&mdash;</span>
+								<input type="number" aria-label="Задайте конечное значение цены в поле" min="0" max="30000" value="30000">
+							</p>
+						</fieldset>
+						<fieldset class="set-filter-2">
 							<legend class="filter-title">Производители:</legend>
 							<ul class="filter-manufacturers-list">
-								<li class="manufacturers-list-item">
-									<input type="checkbox" id="bosch" name="Bosch" checked>
+								<li class="manufacturers-list-item checkbox-on">
+									<input type="checkbox" id="bosch" name="Bosch" checked="">
 									<label for="bosch">Bosch</label>
 								</li>
-								<li class="manufacturers-list-item">
+								<li class="manufacturers-list-item checkbox-off">
 									<input type="checkbox" id="interskol" name="Interskol">
-									<label for="interskol">Interskol</label>
+									<label for="interskol">Интерскол</label>
 								</li>
-								<li class="manufacturers-list-item">
+								<li class="manufacturers-list-item checkbox-on">
 									<input type="checkbox" id="makita" name="Makita" checked>
 									<label for="makita">Makita</label>
 								</li>
-								<li class="manufacturers-list-item">
+								<li class="manufacturers-list-item checkbox-off">
 									<input type="checkbox" id="dewalt" name="DeWalt">
 									<label for="dewalt">DeWalt</label>
 								</li>
-								<li class="manufacturers-list-item">
+								<li class="manufacturers-list-item checkbox-off">
 									<input type="checkbox" id="hitachi" name="Hitachi">
 									<label for="hitachi">Hitachi</label>
 								</li>
 							</ul>
 						</fieldset>
-						<fieldset>
+						<fieldset class="set-filter-3">
 							<legend class="filter-title">Питание:</legend>
 							<ul class="filter-energy-list">
-								<li class="energy-list-item">
+								<li class="energy-list-item radio-on">
 									<input type="radio" id="akkum" name="type-energy" value="rechargeable" checked>
 									<label for="akkum">Аккумуляторные</label>
 								</li>
-								<li class="energy-list-item">
+								<li class="energy-list-item radio-off">
 									<input type="radio" id="network" name="type-energy" value="networking">
 									<label for="network">Сетевые</label>
 								</li>
@@ -194,29 +194,29 @@
 
 						<ul class="sorting-list">
 							<li>
-								<a href="">По цене</a>
+								<a class="sorting-price" href="">По цене</a>
 							</li>
 							<li>
-								<a href="">По типу</a>
+								<a class="sorting-type" href="">По типу</a>
 							</li>
 							<li>
-								<a href="">По функционалу</a>
+								<a class="sorting-function" href="">По функционалу</a>
 							</li>
 							<li class="">
-								<a href="" aria-label="Сортировка цены по возрастанию">
+								<a class="sorting-up" href="" aria-label="Сортировка цены по возрастанию">
 									<div class="triangle-up"></div>
 								</a>
 							</li>
 							<li class="">
-								<a href="" aria-label="Сортировка цены по убыванию">
+								<a class="sorting-down" href="" aria-label="Сортировка цены по убыванию">
 									<div class="triangle-down"></div>
 								</a>
 							</li>
 						</ul>
 					</section>
-					
+
 					<section class="catalog">
-					
+
 						<h2 class="visually-hidden">Каталог перфораторов</h2>
 						<ul class="product-list">
 							<li class="product-list-item">
@@ -233,7 +233,7 @@
 								<p class="old-price">22500 Р.</p>
 								<p class="price">15500 Р.</p>
 							</li>
-							
+
 							<li class="product-list-item">
 								<p class="product-image">
 									<img src="./img/perforator-3.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000">
@@ -248,7 +248,7 @@
 								<p class="old-price">30500 Р.</p>
 								<p class="price">25500 Р.</p>
 							</li>
-							
+
 							<li class="product-list-item">
 								<span class="new-sticker flag">new</span>
 								<p class="product-image">
@@ -264,8 +264,8 @@
 								<p class="old-price"></p>
 								<p class="price">25500 Р.</p>
 							</li>
-							
-								<li class="product-list-item">
+
+							<li class="product-list-item">
 								<p class="product-image">
 									<img src="./img/perforator-2.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000">
 								</p>
@@ -279,7 +279,7 @@
 								<p class="old-price">22500 Р.</p>
 								<p class="price">15500 Р.</p>
 							</li>
-							
+
 							<li class="product-list-item">
 								<p class="product-image">
 									<img src="./img/perforator-3.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000">
@@ -294,7 +294,7 @@
 								<p class="old-price">30500 Р.</p>
 								<p class="price">25500 Р.</p>
 							</li>
-							
+
 							<li class="product-list-item">
 								<p class="product-image">
 									<img src="./img/perforator-4.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000">
@@ -309,8 +309,8 @@
 								<p class="old-price"></p>
 								<p class="price">25500 Р.</p>
 							</li>
-							
-								<li class="product-list-item">
+
+							<li class="product-list-item">
 								<p class="product-image">
 									<img src="./img/perforator-2.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 3000">
 								</p>
@@ -324,7 +324,7 @@
 								<p class="old-price">22500 Р.</p>
 								<p class="price">15500 Р.</p>
 							</li>
-							
+
 							<li class="product-list-item">
 								<p class="product-image">
 									<img src="./img/perforator-3.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 6000">
@@ -339,7 +339,7 @@
 								<p class="old-price">30500 Р.</p>
 								<p class="price">25500 Р.</p>
 							</li>
-							
+
 							<li class="product-list-item">
 								<p class="product-image">
 									<img src="./img/perforator-4.jpg" width="218" height="168" alt="Перфоратор BOSCH BFG 2000">
@@ -354,14 +354,14 @@
 								<p class="old-price"></p>
 								<p class="price">25500 Р.</p>
 							</li>
-							
+
 						</ul>
 					</section>
 
 					<section class="pagination">
 						<h2 class="visually-hidden">Пагинация</h2>
 						<ul class="page-list">
-							<li class="page-number">
+							<li class="page-number page-current">
 								<a href="" aria-label="Первая страница отсортированных товаров">1</a>
 							</li>
 							<li class="page-number">
@@ -370,7 +370,7 @@
 							<li class="page-number">
 								<a href="" aria-label="Третья страница отсортированных товаров">3</a>
 							</li>
-							<li class="page-number">
+							<li class="page-number page-next">
 								<a href="" aria-label="Переход на последующие страницы списка отсортированных товаров">Следующая</a>
 							</li>
 						</ul>
@@ -383,8 +383,10 @@
 				<h2 class="visually-hidden">Описание вида товаров</h2>
 				<h3>Пара слов о перфораторах</h3>
 				<p>
-					Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне. <br>
-					Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+					Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.
+				</p>
+				<p class="wide-letterspacing">
+				Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
 				</p>
 			</section>
 		</div>
