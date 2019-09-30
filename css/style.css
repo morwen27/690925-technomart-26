@@ -98,22 +98,26 @@ input[type="radio"].visually-hidden {
 }
 
 /*Хедер*/
-.header-logo,
+.header-second-menu .header-logo,
 .footer-logo {
 	width: 220px;
 	height: 47px;
+	padding: 13px 55px 11px 56px;
 
 	text-align: center;
 
 	background-color: #ee3643;
-	border-bottom: 5px solid #ba2732;
+	box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 }
 
-.header-logo:hover,
-.footer-logo:hover,
-.header-logo:active,
-.footer-logo:active {
+.header-second-menu .header-logo:hover,
+.footer-logo:hover {
 	background-color: #ca2c37;
+}
+
+.header-second-menu .header-logo:active,
+.footer-logo:active {
+	background-color: #ba2732;
 }
 
 .header-description {
@@ -144,7 +148,7 @@ input[type="radio"].visually-hidden {
 	display: block;
 	height: 45px;
 	margin-bottom: 5px;
-	padding-top: 8px;
+	padding-top: 9px;
 	padding-bottom: 8px;
 	padding-right: 0px;
 	padding-left: 52px;
@@ -155,9 +159,9 @@ input[type="radio"].visually-hidden {
 }
 
 .header-contacts a::before {
-	content: url("./img/icon-phone.svg");
+	content: url("/img/icon-phone.svg");
 	position: relative;
-	top: 3px;
+	top: 2px;
 	right: 40px;
 }
 
@@ -305,15 +309,6 @@ input[type="radio"].visually-hidden {
 	opacity: 1;
 }
 
-.header-logo a:hover,
-.header-logo a:active {
-	background-color: #ca2c37;
-}
-
-.header-logo a {
-	padding: 13px 55px 11px 56px;
-}
-
 .bookmark:hover path {
 	opacity: 1;
 }
@@ -397,6 +392,11 @@ input[type="radio"].visually-hidden {
 	fill: #32425C;
 }
 
+.login-link:active path,
+.login-link:active polygon {
+	fill: #c5c5c5;
+}
+
 .user-navigation a:hover {
 	color: #ee3643;
 }
@@ -411,6 +411,7 @@ input[type="radio"].visually-hidden {
 	width: 299px;
 	height: 45px;
 	margin: 0px;
+	margin-top: 22px;
 	font-size: 21px;
 	line-height: 21px;
 	color: #000000;
@@ -424,6 +425,7 @@ input[type="radio"].visually-hidden {
 
 .user-links {
 	margin: 0px;
+	height: 45px;
 }
 
 .user-links a {
@@ -507,46 +509,50 @@ input[type="radio"].visually-hidden {
 
 /*О компании и контакты*/
 .company-description h2 {
-    margin-bottom: 26px;
+	margin-bottom: 26px;
 }
+
 .company-description p {
-    margin: 0;
-    margin-bottom: 24px;
-	
+	margin: 0;
+	margin-bottom: 24px;
+
 	font-family: "PT Sans", "Arial", sans-serif;
-    font-size: 13px;
-    letter-spacing: 0.135px;   
+	font-size: 13px;
+	letter-spacing: 0.135px;
 }
 
 .company-description .normal-letterspacing {
-    letter-spacing: 0.05px;
-    margin-bottom: 20px;
+	letter-spacing: 0.05px;
+	margin-bottom: 20px;
 }
+
 .company-description .no-margin-bottom {
 	margin-bottom: 0px;
 }
 
 .delievery-list {
-    min-height: 100px;
+	min-height: 100px;
 	margin: 0;
-    margin-bottom: 37px;
-    padding: 0px;    
+	margin-bottom: 37px;
+	padding: 0px;
 }
 
 .delievery-list li {
-    font-size: 18px;
-    line-height: 20px;
-    padding-left: 36px;
-    margin-bottom: 20px;
-	
-    background-image: url("./img/red-think-line.png");
-    background-repeat: no-repeat;
-    background-position: 0% 50%;
-    background-size: 25px 2px;
+	font-size: 18px;
+	line-height: 20px;
+	padding-left: 36px;
+	margin-bottom: 20px;
+
+	background-image: url("/img/red-think-line.png");
+	background-repeat: no-repeat;
+	background-position: 0% 50%;
+	background-size: 25px 2px;
 }
+
 .company-description .small-map {
-    margin: 30px 0px 33px;
+	margin: 30px 0px 33px;
 }
+
 .company-description .about-button {
 	display: block;
 
@@ -565,19 +571,19 @@ input[type="radio"].visually-hidden {
 }
 
 .company-description .modal-button {
-    display: block;
-    width: 300px;
-    height: 38px;
-    padding: 11px 55px 11px 61px;
-	
-    font-size: 14px;
-    line-height: 18px;
-    text-align: center;
-    text-transform: uppercase;
-    color: #ffffff;
-	
-    background-color: #ee3643;
-    border-radius: 3px;
+	display: block;
+	width: 300px;
+	height: 38px;
+	padding: 11px 55px 11px 61px;
+
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+
+	background-color: #ee3643;
+	border-radius: 3px;
 }
 
 a.button:hover {
@@ -629,6 +635,7 @@ a.button:active {
 
 .footer-first-menu a:active {
 	color: rgba(241, 245, 247, 0.5);
+	text-decoration: none;
 }
 
 .footer-second-menu a {
@@ -642,6 +649,7 @@ a.button:active {
 
 .footer-second-menu a:active {
 	color: rgba(255, 209, 128, 0.5);
+	text-decoration: none;
 }
 
 .socail-list {
@@ -737,6 +745,7 @@ a.button:active {
 .feedback a:active,
 .developer a:active {
 	color: #ee3643;
+	text-decoration: none;
 }
 
 .footer-logo {
@@ -783,7 +792,7 @@ a.button:active {
 	padding-left: 41px;
 
 	color: inherit;
-	background-image: url("./img/icon-right-small.svg");
+	background-image: url("/img/icon-right-small.svg");
 	background-position: 15% 51%;
 	background-repeat: no-repeat;
 }
@@ -908,28 +917,51 @@ a.button:active {
 }
 
 .manufacturers-list-item:last-child {
-	margin-bottom: 20px;
+	margin-bottom: 23px;
 }
 
 .energy-list-item:last-child {
 	margin-bottom: 10px;
 }
-
-.checkbox-off {
-	background-image: url("./img/checkbox-off.svg");
-	background-size: 23px 23px;
-	background-repeat: no-repeat;
-	background-position: 0% 100%;
+.checkbox-on label,
+.checkbox-off label {
+	position: relative;
 }
-
-.checkbox-on {
-	background-image: url("./img/checkbox-on.svg");
-	background-size: 27px 23px;
-	background-repeat: no-repeat;
-	background-position: 0% 100%;
-	margin-bottom: 17px;
+.checkbox-on svg {
+	position: absolute;
+	top: -2px;
+	left: 0px;
+	width: 27px;
+	height: 23px;
 }
-
+.makita svg {	
+	top: -1px;
+	left: 0px;	
+}
+.checkbox-off  svg {
+	position: absolute;
+	top: -1px;
+	left: 0px;
+	width: 23px;
+	height: 23px;
+}
+.dewalt svg,
+.hitachi svg {	
+	top: 0px;
+	left: 0px;	
+}
+.checkbox-off label:hover path {
+	fill: #b5b5b5;
+}
+.checkbox-off input:disabled path {
+	fill: (181, 181, 181, 0.3);
+}
+.checkbox-on label:hover path {
+	fill: #b5b5b5;
+}
+.checkbox-on input:disabled path {
+	fill: (181, 181, 181, 0.3);
+}
 .filter-energy-list {
 	margin: 0px;
 	padding: 0px;
@@ -939,28 +971,43 @@ a.button:active {
 	height: 25px;
 	margin-bottom: 15px;
 }
-
-.radio-on {
-	background-image: url("./img/radio-on.svg");
-	background-size: 25px 25px;
-	background-repeat: no-repeat;
-	background-position: 0% 0%;
+.radio-on label,
+.radio-off label {
+	position: relative;
 }
 
-.radio-off {
-	background-image: url("./img/radio-off.svg");
-	background-size: 25px 25px;
-	background-repeat: no-repeat;
-	background-position: 0% 0%;
+.radio-on svg {
+	position: absolute;
+	top: -4px;
+	left: -1px;
+	
+	width: 25px;
+	height: 25px;	
 }
-
-/*Радио-баттон и чекбоксы при наведении и блокировке ?????*/
-.energy-list-item:hover path,
-.manufacturers-list-item:hover path,
-.energy-list-item:hover circle {
+.radio-on label:hover path,
+.radio-on label:hover circle {
+	fill: (181, 181, 181, 0.3);
+}
+.radio-on input:disabled path,
+.radio-on input:disabled circle {
+	fill: red;
+}
+.radio-off svg {
+	position: absolute;
+	top: -3px;
+	left: -1px;
+	
+	width: 25px;
+	height: 25px;
+}
+.radio-off label:hover path,
+.radio-off label:hover circle {
 	fill: #b5b5b5;
 }
-
+.radio-off input:disabled path,
+.radio-off input:disabled circle {
+	fill: (181, 181, 181, 0.3);
+}
 .filter-button {
 	width: 140px;
 	height: 38px;
@@ -1090,7 +1137,7 @@ a.button:active {
 }
 
 .product-list-item .flag {
-	background: url("./img/new-flag.png") no-repeat 0 0;
+	background: url("/img/new-flag.png") no-repeat 0 0;
 }
 
 .product-list li {
@@ -1208,39 +1255,51 @@ h3.product-title {
 	text-transform: uppercase;
 	text-decoration: none;
 	background-color: #63a63e;
-	border: 3px solid #63a63e;
-	border-bottom-color: #367315;
+	box-shadow: inset 0px -3px 0 0 #367315;
 	border-radius: 3px;
 }
 
 .product-action .to-cart {
 	position: relative;
+
+	padding-left: 48px;
+	padding-top: 11px;
 }
 
 .product-action .to-cart::before {
-	content: url("./img/icon-cart.svg");
-	position: absolute;
-	top: 8px;
-	left: 11px;
-	width: 15px;
-	height: 15px;
+	content: url(/img/icon-cart.svg);
 
-	color: rgba(41, 52, 73, 0.5);
+	position: absolute;
+	top: 11px;
+	left: 14px;
+
+	opacity: 0.3;
 }
 
 .product-action .to-cart:hover {
 	background-color: #5fbb2d;
+	box-shadow: inset 0px -3px 0 0 #367315;
 }
 
 .product-action .to-cart:active {
 	background-color: #518534;
+	box-shadow: none;
+}
+
+.product-action .to-cart:hover::before {
+	opacity: 1;
+}
+
+.product-action .to-cart:active::before {
+	opacity: 1;
 }
 
 .product-action .to-bookmarks {
 	padding-left: 33px;
 	color: #32425c;
 	background: #ffffff;
-	border-bottom-color: #63a63e;
+	border: solid 3px #63a63e;
+	box-shadow: none;
 }
 
 .product-action .to-bookmarks:hover {
@@ -1361,7 +1420,7 @@ h3.product-title {
 }
 
 .modal-info::before {
-	content: url("./img/form-1.svg");
+	content: url("/img/form-1.svg");
 	width: 66px;
 	height: 66px;
 	padding-right: 32px;
@@ -1409,7 +1468,7 @@ h3.product-title {
 .modal-to-cart .close-button::before,
 .feedback-form .close-button::before,
 .modal-map .close-button::before {
-	content: url("./img/icon-close.svg");
+	content: url("/img/icon-close.svg");
 	width: 21px;
 	height: 21px;
 }
@@ -1423,7 +1482,7 @@ h3.product-title {
 	height: 430px;
 	top: 2520px;
 	left: 50%;
-	margin-left: -310px;	
+	margin-left: -310px;
 
 	background-color: inherit;
 	border-top: 7px solid #ee3643;
@@ -1511,16 +1570,16 @@ h3.product-title {
 /*Карта*/
 .modal-map {
 	display: none;
-    position: absolute;
+	position: absolute;
 	z-index: 10;
-	top: 3589px;    
-    left: 50%;
-	
-    width: 940px;
-    height: 446px;    
-    margin-left: -470px;
-	
-    box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
+	top: 3589px;
+	left: 50%;
+
+	width: 940px;
+	height: 446px;
+	margin-left: -470px;
+
+	box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
 }
 
 .modal-map .close-button {
@@ -1761,7 +1820,7 @@ h3.product-title {
 }
 
 .materials a::after {
-	content: url("./img/icon-1.svg");
+	content: url("/img/icon-1.svg");
 	width: 44px;
 	height: 65px;
 	position: relative;
@@ -1774,7 +1833,7 @@ h3.product-title {
 }
 
 .tool a::after {
-	content: url("./img/icon-2.svg");
+	content: url("/img/icon-2.svg");
 	width: 75px;
 	height: 61px;
 	position: relative;
@@ -1787,7 +1846,7 @@ h3.product-title {
 }
 
 .technique a::after {
-	content: url("./img/icon-3.svg");
+	content: url("/img/icon-3.svg");
 	width: 78px;
 	height: 62px;
 	position: relative;
@@ -1800,7 +1859,7 @@ h3.product-title {
 }
 
 .discount a::after {
-	content: url("./img/icon-4.svg");
+	content: url("/img/icon-4.svg");
 	width: 59px;
 	height: 72px;
 	position: relative;
@@ -1813,7 +1872,7 @@ h3.product-title {
 }
 
 .delievery a::after {
-	content: url("./img/icon-5.svg");
+	content: url("/img/icon-5.svg");
 	width: 78px;
 	height: 63px;
 	position: relative;
@@ -1851,30 +1910,4 @@ h3.product-title {
 	line-height: 24px;
 
 	color: #ffffff;
-}
-
-.main-header,
-.header-second-menu,
-.header-info,
-.header-menu,
-.user-navigation,
-.company-description,
-.company-description div,
-.main-footer div,
-.main-flex-container,
-.column-container,
-.product-list,
-.container-header-second-menu,
-.container-header-info-nav,
-.container-footer-logo-menu,
-.container-footer-contacts-menu,
-.container-footer-other-info,
-.footer-other-info,
-.container-filter-catalog,
-.container-about-product,
-.container-filter-catalog,
-.container-catalog-pagination .company-description,
-.index.main-flex-container,
-.features {
-	/* outline: 1px solid green; */
 }
