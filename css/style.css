@@ -1796,19 +1796,21 @@ h3.product-title {
 /*Блок "Приемущества"*/
 .features-list {
 	display: flex;
-	align-self: center;
+	align-self: flex-start;
 	justify-content: space-between;
 	flex-wrap: wrap;
 	
-	margin: 0;
+	width: 940px;
+	margin: 0px;
+	margin-top: 59px;
 	padding: 0;
 }
 
 .features-list-item {
-	display: inline-block;
 	width: 300px;
 	height: 123px;
-	padding: 23px 135px 75px 26px;
+	padding: 21px 135px 75px 22px;
+	margin-bottom: 20px;
 
 	font-size: 24px;
 	line-height: 30px;
@@ -1821,7 +1823,8 @@ h3.product-title {
 	width: 135px;
 	height: 38px;
 	padding: 10px 0px;
-	margin-top: 15px;
+	margin-top: 12px;
+	margin-left: 3px;
 	vertical-align: top;
 
 	font-size: 14px;
@@ -1832,38 +1835,71 @@ h3.product-title {
 	color: #ffffff;
 	background-color: rgba(0, 0, 0, 0.1);
 }
-
 .features-list-item.materials {
 	order: 1;
+	
 	background-color: #ffbf47;
+	background-image: url("../img/icon-1.svg"), url("../img/new-flag.png");
+	background-repeat: no-repeat, no-repeat;
+	background-size: 44px 65px, 60px 59px;
+	background-position: 83.3% 54%, 100% 0%;
 }
 
 .features-list-item.tool {
 	order: 2;
+	
 	background-color: #3bbce3;
+	background-image: url("../img/icon-2.svg");
+	background-repeat: no-repeat;
+	background-size: 75px 61px;
+	background-position: 87.7% 54%;
 }
 
 .features-list-item.technique {
 	order: 3;
+	
 	background-color: #dc91d8;
+	background-image: url("../img/icon-3.svg");
+	background-repeat: no-repeat;
+	background-size: 78px 62px;
+	background-position: 86% 51%;
 }
 
 .features-list-item.discount {
 	order: 5;
+	
 	background-color: #8ed78f;
+	background-image: url("../img/icon-4.svg");
+	background-repeat: no-repeat;
+	background-size: 59px 72px;
+	background-position: 81.5% 51%;
 }
 
 .features-list-item.delievery {
 	order: 6;
+	
+	margin-left: 640px;
+	margin-top: -123px;
+	margin-bottom: -20px;
+	
 	background-color: #ffc047;
+	background-image: url("../img/icon-5.svg");
+	background-repeat: no-repeat;
+	background-size: 78px 63px;
+	background-position: 86% 53%;
 }
-
+.technique a,
+.discount a,
+.delievery a {
+	margin-left: 1px;
+}
 /*Слайдер*/
 .slider-section {
 	order: 4;
 	position: relative;
 	
 	width: 620px;
+	height: 266px;
 }
 .slider-list {
 	display: block;
@@ -1890,6 +1926,7 @@ h3.product-title {
 }
 .index-2 {
 	position: absolute;
+	z-index: -1;
 	top: 0px;
 	left: 0px;
 	
@@ -1953,3 +1990,75 @@ h3.product-title {
 	background-image: url("../img/icon-right.svg");
 	
 }
+.slider-paginatiion {
+    position: absolute;
+    bottom: 40px;
+    left: 295px;
+	
+    width: 150px;
+    height: 10px;
+}
+.slider-dots {
+	position: relative;
+	
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 6px;
+    padding: 0px;
+	
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: none;
+}
+.slide-current::after {
+    content: "";
+    
+	position: absolute;
+    top: 2px;
+    left: 2px;
+    
+	display: block;
+   width: 6px;
+    height: 6px;
+  
+	background-color: #ee3643;
+    border-radius: 5px;
+}
+/*Популярные продукты*/
+.popular-product {
+	position: relative;
+	
+	width: 940px;
+	height: 428px;
+	margin-top: 53px;
+}
+.popular-product h2 { 	
+    width: 940px;
+    height: 89px;
+    margin: 0px;
+	margin-bottom: 20px;
+	
+    padding: 30px 0px 0px 29px;
+    background-color: #f9f5f0;
+}
+.popular-product .all-popular-product {
+	position: absolute;
+    top: 25px;
+    right: 24px;
+	
+    width: 253px;
+    height: 38px;
+    padding-top: 11px;
+    margin: 0px;
+	
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+	
+    background-color: #ee3643;
+    border-radius: 3px;
+}
+
