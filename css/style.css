@@ -299,7 +299,7 @@ input[type="radio"].visually-hidden {
 }
 
 /*Второе меню при наведении*/
-.header-second-menu a:hover,
+.bookmark a:hover,
 .search input:hover,
 .search label:hover {
 	background-color: #212a3a;
@@ -323,7 +323,7 @@ input[type="radio"].visually-hidden {
 }
 
 /*Второе меню при клике*/
-.header-second-menu a:active {
+.bookmark a:active {
 	color: color: rgba(255, 255, 255, 0.6);
 
 	background-color: #161d29;
@@ -923,10 +923,12 @@ a.button:active {
 .energy-list-item:last-child {
 	margin-bottom: 10px;
 }
+
 .checkbox-on label,
 .checkbox-off label {
 	position: relative;
 }
+
 .checkbox-on svg {
 	position: absolute;
 	top: -2px;
@@ -934,34 +936,42 @@ a.button:active {
 	width: 27px;
 	height: 23px;
 }
-.makita svg {	
+
+.makita svg {
 	top: -1px;
-	left: 0px;	
+	left: 0px;
 }
-.checkbox-off  svg {
+
+.checkbox-off svg {
 	position: absolute;
 	top: -1px;
 	left: 0px;
 	width: 23px;
 	height: 23px;
 }
+
 .dewalt svg,
-.hitachi svg {	
+.hitachi svg {
 	top: 0px;
-	left: 0px;	
+	left: 0px;
 }
+
 .checkbox-off label:hover path {
 	fill: #b5b5b5;
 }
+
 .checkbox-off input:disabled path {
 	fill: (181, 181, 181, 0.3);
 }
+
 .checkbox-on label:hover path {
 	fill: #b5b5b5;
 }
+
 .checkbox-on input:disabled path {
 	fill: (181, 181, 181, 0.3);
 }
+
 .filter-energy-list {
 	margin: 0px;
 	padding: 0px;
@@ -971,6 +981,7 @@ a.button:active {
 	height: 25px;
 	margin-bottom: 15px;
 }
+
 .radio-on label,
 .radio-off label {
 	position: relative;
@@ -980,34 +991,40 @@ a.button:active {
 	position: absolute;
 	top: -4px;
 	left: -1px;
-	
+
 	width: 25px;
-	height: 25px;	
+	height: 25px;
 }
+
 .radio-on label:hover path,
 .radio-on label:hover circle {
 	fill: (181, 181, 181, 0.3);
 }
+
 .radio-on input:disabled path,
 .radio-on input:disabled circle {
 	fill: red;
 }
+
 .radio-off svg {
 	position: absolute;
 	top: -3px;
 	left: -1px;
-	
+
 	width: 25px;
 	height: 25px;
 }
+
 .radio-off label:hover path,
 .radio-off label:hover circle {
 	fill: #b5b5b5;
 }
+
 .radio-off input:disabled path,
 .radio-off input:disabled circle {
 	fill: (181, 181, 181, 0.3);
 }
+
 .filter-button {
 	width: 140px;
 	height: 38px;
@@ -1724,6 +1741,9 @@ h3.product-title {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: stretch;
+
+	width: 940px;
+	margin: 0 auto;
 }
 
 .main-flex-container {
@@ -1773,15 +1793,13 @@ h3.product-title {
 	padding-top: 55px;
 }
 
-.features {
-	display: flex;
-	align-self: center;
-	justify-content: row;
-	flex-wrap: wrap;
-}
-
 /*Блок "Приемущества"*/
 .features-list {
+	display: flex;
+	align-self: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	
 	margin: 0;
 	padding: 0;
 }
@@ -1816,98 +1834,122 @@ h3.product-title {
 }
 
 .features-list-item.materials {
+	order: 1;
 	background-color: #ffbf47;
 }
 
-.materials a::after {
-	content: url("/img/icon-1.svg");
-	width: 44px;
-	height: 65px;
-	position: relative;
-	left: 140px;
-	top: -65px;
-}
-
 .features-list-item.tool {
+	order: 2;
 	background-color: #3bbce3;
 }
 
-.tool a::after {
-	content: url("/img/icon-2.svg");
-	width: 75px;
-	height: 61px;
-	position: relative;
-	left: 140px;
-	top: -65px;
-}
-
 .features-list-item.technique {
+	order: 3;
 	background-color: #dc91d8;
 }
 
-.technique a::after {
-	content: url("/img/icon-3.svg");
-	width: 78px;
-	height: 62px;
-	position: relative;
-	left: 140px;
-	top: -65px;
-}
-
 .features-list-item.discount {
+	order: 5;
 	background-color: #8ed78f;
 }
 
-.discount a::after {
-	content: url("/img/icon-4.svg");
-	width: 59px;
-	height: 72px;
-	position: relative;
-	left: 140px;
-	top: -65px;
-}
-
 .features-list-item.delievery {
+	order: 6;
 	background-color: #ffc047;
 }
 
-.delievery a::after {
-	content: url("/img/icon-5.svg");
-	width: 78px;
-	height: 63px;
-	position: relative;
-	left: 140px;
-	top: -65px;
-}
-
 /*Слайдер*/
+.slider-section {
+	order: 4;
+	position: relative;
+	
+	width: 620px;
+}
 .slider-list {
+	display: block;
+	position: relative;
+	
 	margin: 0;
 	padding: 0;
 }
 
-.slider-list-item {
+.slide {
+	display: block;
+	
 	width: 620px;
 	height: 266px;
-	padding: 27px 24px;
-}
-
-.slider-list p {
+	padding: 23px 0px 22px 25px;
 	margin: 0;
-
-	font-size: 36px;
-	line-height: 36px;
-	font-weight: 700;
-
-	text-transform: uppercase;
-	color: #ffffff;
+	
+	background-repeat: no-repeat;
+	background-size: 620px 266px;
+	background-position: 0% 50%;
+}
+.index-1 {
+	background-image: url("../img/slider1.jpg");
+}
+.index-2 {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	
+	background-image: url("../img/slider2.jpg");
+}
+.slide p {
+    margin: 0px;
+    margin-bottom: 121px;
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.slide span {
+    display: block;
+    padding-top: 2px;
+    padding-left: 1px;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    text-transform: none;
+}
+.slider-link {
+    display: block;
+    width: 195px;
+    height: 38px;
+    margin: 0px;
+    padding: 11px 25px 11px 50px;
+    font-size: 14px;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #ee3643;
+    border-radius: 3px;
+}
+.slider-section .slider-button {
+	position: absolute;
+	top: 115px;
+	
+	display: block;	
+	
+	width: 22px;
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	
+	background-color: transparent;
+	border: none;	
 }
 
-.slider-list span {
-	display: block;
+.slider-section .prev {
+	left: 25px;
+		
+	background-image: url("../img/icon-left.svg");	
+	
+}
 
-	font-size: 18px;
-	line-height: 24px;
-
-	color: #ffffff;
+.slider-section .next {
+	right: 20px;
+		
+	background-image: url("../img/icon-right.svg");
+	
 }
