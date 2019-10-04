@@ -255,7 +255,7 @@ input[type="radio"].visually-hidden {
 .bookmark path,
 .cart path,
 .cart circle {
-	opacity: 0.3;
+	fill-opacity: 0.3;
 }
 
 .bookmark a,
@@ -306,16 +306,16 @@ input[type="radio"].visually-hidden {
 }
 
 .search input:hover + svg > path {
-	opacity: 1;
+	fill-opacity: 1;
 }
 
 .bookmark:hover path {
-	opacity: 1;
+	fill-opacity: 1;
 }
 
 .cart:hover path,
 .cart:hover circle {
-	opacity: 1;
+	fill-opacity: 1;
 }
 
 .order a:hover {
@@ -330,12 +330,12 @@ input[type="radio"].visually-hidden {
 }
 
 .bookmark:active path {
-	opacity: 0.5;
+	fill-opacity: 0.5;
 }
 
 .cart:active path,
 .cart:active circle {
-	opacity: 0.5;
+	fill-opacity: 0.5;
 }
 
 .order a:active {
@@ -1893,6 +1893,12 @@ h3.product-title {
 .delievery a {
 	margin-left: 1px;
 }
+.features-list-item a:hover {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+.features-list-item a:active {
+	background-color: rgba(0, 0, 0, 0.5);
+}
 /*Слайдер*/
 .slider-section {
 	order: 4;
@@ -2025,6 +2031,12 @@ h3.product-title {
 	background-color: #ee3643;
     border-radius: 5px;
 }
+.slider-link:hover {
+	background-color: #ca2c37;
+}
+.slider-link:active {
+	background-color: #ba2732;
+}
 /*Популярные продукты*/
 .popular-product {
 	position: relative;
@@ -2033,16 +2045,18 @@ h3.product-title {
 	height: 428px;
 	margin-top: 53px;
 }
-.popular-product h2 { 	
+.popular-product h2, 
+.popular-manufacturer h2 { 	
     width: 940px;
     height: 89px;
     margin: 0px;
 	margin-bottom: 20px;
 	
-    padding: 30px 0px 0px 29px;
+    padding: 29px 0px 0px 28px;
     background-color: #f9f5f0;
 }
-.popular-product .all-popular-product {
+.popular-product .all-popular-product,
+.popular-manufacturer .all-manufacturers-link {
 	position: absolute;
     top: 25px;
     right: 24px;
@@ -2060,5 +2074,77 @@ h3.product-title {
 	
     background-color: #ee3643;
     border-radius: 3px;
+}
+/*Популярные производители*/
+.popular-manufacturer {
+	position: relative;
+	
+	width: 940px;
+	height: 504px;
+	margin-top: 21px;
+}
+.popular-manufacturer .all-manufacturers-link {
+	top: 24px;
+	
+    padding-top: 10px; 
+}
+.popular-manufacturer .manufacturer-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: space-between;
+	height: 310px;
+	margin: 0px;
+	padding: 0px;
+}
+.manufacturer-list-item a {
+	display: block;
+	width: 220px;
+	height: 145px;
+	margin: 0px;
+	border: 1px solid #eaeaea;
+}
+.manufacturer-list-item img {
+	display: block;
+	margin: 0px auto;
+}
+.bosch img {
+	margin-top: 51px;
+}
+.makita img {
+	margin-top: 48px;
+}
+.dewalt img {
+	margin-top: 46px;
+}
+.interskol img {
+	margin-top: 19px;
+	margin-left: 8px;
+}
+.hitachi img {
+	margin-top: 56px;
+	margin-left: 27px;
+}
+.lg img {
+	margin-top: 33px;
+	margin-left: 47px;
+}
+.aeg img {
+	margin-top: 21px;
+	margin-left: 34px;
+}
+.metabo img {
+	margin-top: 32px;
+	margin-left: 9px;
+}
+.manufacturer-list-item a:hover {
+	box-shadow: 0px 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+.manufacturer-list-item a:active {
+	box-shadow: 0px 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+.manufacturer-list-item a:active img {
+	opacity: 0.3;
 }
 
