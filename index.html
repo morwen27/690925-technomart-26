@@ -134,7 +134,7 @@
 							<p>Дрели
 								<span>Соседям на радость!</span>
 							</p>
-							<a class="slider-link" href="">Открыть каталог</a>
+							<a class="slider-link" href="catalog.html">Открыть каталог</a>
 						</li>
 						<li class="slide index-2">
 							<p>Перфораторы
@@ -311,7 +311,7 @@
 						<a class="button request-button" href="">Отправить заявку</a>
 					</li>
 				</ul>
-			</div>			
+			</div>
 		</section>
 
 		<section class="company-description">
@@ -456,6 +456,34 @@
 		</form>
 		<button class="close-button" type="button" aria-label="Закрыть форму обратной связи"></button>
 	</section>
+
+	<script>
+		var feedbackLink = document.querySelector(".modal-button"); //Находим кнопку вызова формы обратной связи
+		var feedbackForm = document.querySelector(".feedback-form"); //Находим разметку формы обратной связи
+		var closeFeedbackForm = feedbackForm.querySelector(".close-button"); //Находим кнопку, которая закрывает ФОС
+		var login = feedbackForm.querySelector("[name=Name]"); //Находим инпут для логина, чтобы при клике поставить в него фокус
+		var email = feedbackForm.querySelector("[name=E-mail]");
+		var form = feedbackForm.querySelector("form"); //Находим разметку формы, чтобы проверить ее поля на обязательность заполнения
+
+		feedbackLink.addEventListener("click", function(evt) {
+			evt.preventDefault();
+			feedbackForm.classList.add("feedback-form-show");
+			login.focus();
+		});
+
+		form.addEventListener("submit", function(evt) {
+			evt.preventDefault();
+			if (!Name.value || !E - mail.value) {
+				evt.preventDefault();
+			}
+		});
+
+		closeFeedbackForm.addEventListener("click", function(evt) {
+			evt.preventDefault();
+			feedbackForm.classList.remove("feedback-form-show");
+		});
+
+	</script>
 
 </body>
 

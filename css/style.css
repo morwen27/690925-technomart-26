@@ -148,7 +148,7 @@ input[type="radio"].visually-hidden {
 	display: block;
 	height: 45px;
 	margin-bottom: 5px;
-	padding-top: 8px;
+	padding-top: 11px;
 	padding-bottom: 8px;
 	padding-right: 0px;
 	padding-left: 71px;
@@ -160,6 +160,7 @@ input[type="radio"].visually-hidden {
 	background-position: 12px 10px;
 	border: 3px solid #ffffff;
 }
+
 .navigation a {
 	font-size: 17px;
 	line-height: 17px;
@@ -504,6 +505,7 @@ input[type="radio"].visually-hidden {
 
 /*О компании и контакты*/
 .company-description h2 {
+	margin-top: 23px;
 	margin-bottom: 26px;
 }
 
@@ -785,28 +787,23 @@ a.button:active {
 .breadcrumbs a {
 	display: block;
 	padding-left: 41px;
-
 	color: inherit;
 	background-image: url("../img/icon-right-small.svg");
-	background-position: 15% 51%;
+	background-position: 15% 50%;
 	background-repeat: no-repeat;
 }
 
 .breadcrumbs li:first-child a {
 	position: relative;
-
 	width: 14px;
 	height: 12px;
 	padding: 0px;
-
-	background-image: none;
+	background-image: url("../img/icon-home.svg");
+	background-repeat: no-repeat;
+	background-size: 15px 12px;
+	background-position: -2px -1px;
 }
 
-.breadcrumbs li:first-child svg {
-	position: absolute;
-	bottom: 1px;
-	right: 1px;
-}
 
 .breadcrumbs li:nth-child(3) a {
 	padding-left: 40px;
@@ -893,18 +890,11 @@ a.button:active {
 	padding: 0px;
 }
 
-.filter-energy-list label {
-	line-height: 26px;
-}
+.filter-energy-list label {}
 
 .manufacturers-list-item {
 	height: 23px;
 	margin-bottom: 17px;
-}
-
-.filter-manufacturers-list input[type="checkbox"],
-.filter-energy-list input[type="radio"] {
-	display: none;
 }
 
 .manufacturers-list-item:nth-child(4) {
@@ -919,54 +909,6 @@ a.button:active {
 	margin-bottom: 10px;
 }
 
-.checkbox-on label,
-.checkbox-off label {
-	position: relative;
-}
-
-.checkbox-on svg {
-	position: absolute;
-	top: -1px;
-	left: 0px;
-	width: 27px;
-	height: 23px;
-}
-
-.makita svg {
-	top: -2px;
-	left: 0px;
-}
-
-.checkbox-off svg {
-	position: absolute;
-	top: -1px;
-	left: 0px;
-	width: 23px;
-	height: 23px;
-}
-
-.dewalt svg,
-.hitachi svg {
-	top: -2px;
-	left: 0px;
-}
-
-.checkbox-off label:hover path {
-	fill: #b5b5b5;
-}
-
-.checkbox-off input:disabled path {
-	fill: (181, 181, 181, 0.3);
-}
-
-.checkbox-on label:hover path {
-	fill: #b5b5b5;
-}
-
-.checkbox-on input:disabled path {
-	fill: (181, 181, 181, 0.3);
-}
-
 .filter-energy-list {
 	margin: 0px;
 	padding: 0px;
@@ -975,49 +917,6 @@ a.button:active {
 .energy-list-item {
 	height: 25px;
 	margin-bottom: 15px;
-}
-
-.radio-on label,
-.radio-off label {
-	position: relative;
-}
-
-.radio-on svg {
-	position: absolute;
-	top: -4px;
-	left: -1px;
-
-	width: 25px;
-	height: 25px;
-}
-
-.radio-on label:hover path,
-.radio-on label:hover circle {
-	fill: (181, 181, 181, 0.3);
-}
-
-.radio-on input:disabled path,
-.radio-on input:disabled circle {
-	fill: red;
-}
-
-.radio-off svg {
-	position: absolute;
-	top: -3px;
-	left: -1px;
-
-	width: 25px;
-	height: 25px;
-}
-
-.radio-off label:hover path,
-.radio-off label:hover circle {
-	fill: #b5b5b5;
-}
-
-.radio-off input:disabled path,
-.radio-off input:disabled circle {
-	fill: (181, 181, 181, 0.3);
 }
 
 .filter-button {
@@ -1576,10 +1475,12 @@ h3.product-title {
 	border-radius: 4px;
 	border: none;
 }
+
 .feedback-form input:hover,
 .feedback-form textarea:hover {
 	border: 2px solid #b5b5b5;
 }
+
 .feedback-form input:focus,
 .feedback-form textarea:focus {
 	border: 2px solid #ee3643;
@@ -1591,7 +1492,7 @@ h3.product-title {
 	display: none;
 	position: fixed;
 	z-index: 10;
-	top: 134px;
+	top: 133px;
 	left: 50%;
 	width: 940px;
 	height: 446px;
@@ -1782,9 +1683,8 @@ h3.product-title {
 	align-self: center;
 	align-content: flex-start;
 	justify-content: space-between;
-
 	width: 940px;
-	height: 536px;
+	height: 535px;
 	padding-top: 55px;
 }
 
@@ -2233,11 +2133,11 @@ h3.product-title {
 }
 
 .services .services-list {
-    display: flex;
-	
-    margin: 0px;
-    margin-top: 28px;
-    padding: 0px;
+	display: flex;
+
+	margin: 0px;
+	margin-top: 28px;
+	padding: 0px;
 }
 
 .services-list-buttons {
@@ -2246,6 +2146,7 @@ h3.product-title {
 	height: 279px;
 	padding-top: 42px;
 }
+
 .services-list-buttons::after {
 	content: url("../img/shadow.png");
 	position: absolute;
@@ -2271,18 +2172,27 @@ h3.product-title {
 	border: none;
 }
 
-.services-list-buttons button:focus {
+.services-list-buttons button:hover {
+	color: #ffffff;
+
+	background-color: #293449;
+	box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
+}
+
+.services-list-buttons button:active {
 	color: #32425c;
 
 	background-color: #ffffff;
 	box-shadow: 0px 1px 0 0 #ffffff, inset 0px 1px 0 0 #ffffff;
 
 }
+
 .services-list-item {
 	width: 700px;
 	height: 330px;
 	padding-left: 81px;
 }
+
 .services-list-item .services-title {
 	margin-top: 38px;
 	margin-bottom: 26px;
@@ -2294,30 +2204,35 @@ h3.product-title {
 	text-align: left;
 	text-transform: uppercase;
 }
+
 .services-list-item .services-description {
 	width: 100%;
 	height: auto;
 	overflow: hidden;
 	margin: 0px;
 }
+
 .services-list .service-delievery {
 	background-image: url("../img/delievery.png");
 	background-repeat: no-repeat;
 	background-size: 468px 261px;
 	background-position: 99.5% 92%;
 }
+
 .services-list .service-credit,
 .services-list .service-garantie {
 	position: relative;
 }
+
 .services-list .service-credit::after {
 	content: url("../img/credit.png");
 	position: absolute;
 	width: 465px;
 	height: 285px;
 	bottom: 2px;
-    right: -10px;
+	right: -10px;
 }
+
 .service-credit .request-button {
 	display: block;
 	width: 195px;
@@ -2332,112 +2247,212 @@ h3.product-title {
 	background-color: #ff5357;
 	border-radius: 3px;
 }
+
 .service-credit .services-description {
 	margin-bottom: 25px;
 }
+
 .services-list .service-garantie::after {
-    content: url(http://127.0.0.1:50029/img/garantie.png);
-    position: absolute;
-    width: 389px;
-    height: 289px;
-    bottom: 0px;
-    right: -8px;
+	content: url(http://127.0.0.1:50029/img/garantie.png);
+	position: absolute;
+	width: 389px;
+	height: 289px;
+	bottom: 0px;
+	right: -8px;
 }
+
 /* Фильтр с ползунками*/
 .set-filter-1 .range-filter {
 	width: 220px;
-	height: 127px;	
+	height: 127px;
 }
+
 .set-filter-1 .filter-title {
 	margin-bottom: 14px;
 }
+
 .range-controls {
 	position: relative;
-	
+
 	width: 220px;
-	height: 80px;	
+	height: 80px;
 	margin-bottom: 9px;
 	padding-top: 39px;
 	padding-left: 20px;
 	padding-right: 20px;
-	
+
 	background-color: #f7f3ec;
 	border-radius: 3px;
 }
-.range-controls .scale {	
+
+.range-controls .scale {
 	height: 2px;
-	
+
 	background: #d7dcde;
 }
+
 .range-controls .bar {
 	width: 150px;
 	height: 2px;
-	
+
 	background: #07ca7c;
 }
+
 .range-controls .toggle {
 	position: absolute;
-	top: 30px;	
-	
+	top: 30px;
+
 	box-sizing: content-box;
 	width: 4px;
-	height: 4px;	
+	height: 4px;
 	padding: 0px;
 	margin: 0px;
-	
+
 	background-color: #ababab;
 	box-shadow: 0 2px 1px 0 #dfdcd7;
 	border: 8px solid #ffffff;
 	border-radius: 50%;
 	cursor: pointer;
 }
+
 .range-controls .toggle-min {
 	left: 20px;
 }
+
 .range-controls .toggle-max {
 	left: 160px;
 }
+
 .price-controls {
 	font-size: 0px;
 }
+
 .price-controls input {
 	width: 95px;
 	height: 38px;
-	
+
 	padding: 5px 9px 6px 14px;
-	
+
 	font-size: 17px;
 	line-height: 18px;
 	text-align: center;
-	
+
 	background-color: #f7f3ec;
 	border-radius: 3px;
 	border: none;
 }
+
 .price-controls span {
-    display: inline-block;
-    margin: 0px 7px 0px 9px;
-    font-size: 17px;
+	display: inline-block;
+	margin: 0px 7px 0px 9px;
+	font-size: 17px;
 }
 
+/*Стилизация интерактивных элементов фильтра на каталожной странице*/
+.manufacturers-list-item label,
+.energy-list-item label {
+	position: relative;
+}
 
+.manufacturers-list-item input[type="checkbox"] + .checkbox-indicator {
+	position: absolute;
+	top: -1px;
+	left: 0px;
 
+	width: 23px;
+	height: 23px;
 
+	border: 2px solid #c5c5c5;
+	border-radius: 3px;
+}
 
+.manufacturers-list-item input[type="checkbox"]:checked + .checkbox-indicator::before {
+	box-sizing: content-box;
+	content: "";
+	position: absolute;
+	top: -4px;
+	left: 12px;
+	width: 4px;
+	height: 20px;
+	transform: rotate(44.5deg);
+	background-color: #c5c5c5;
+	border-right: 2px solid #ffffff;
+	border-left: 2px solid #ffffff;
+	border-top: 2px solid #ffffff;
+}
 
+.manufacturers-list-item input[type="checkbox"]:checked + .checkbox-indicator::after {
+	box-sizing: content-box;
+	content: "";
+	position: absolute;
+	top: 6px;
+	left: 4px;
+	width: 4px;
+	height: 7px;
+	transform: rotate(-44.5deg);
+	background-color: #c5c5c5;
+}
 
+.makita input[type="checkbox"] + .checkbox-indicator,
+.dewalt input[type="checkbox"] + .checkbox-indicator,
+.hitachi input[type="checkbox"] + .checkbox-indicator {
+	top: -2px;
+}
 
+.energy-list-item input[type="radio"] + .radio-indicator {
+	position: absolute;
+	top: -2.5px;
+	left: -1px;
+	width: 25px;
+	height: 25px;
+	border: 4px solid #c5c5c5;
+	border-radius: 50%;
+}
 
+.energy-list-item input[type="radio"]:checked + .radio-indicator::after {
+	content: "";
+	position: absolute;
+	top: 4px;
+	left: 4px;
 
+	width: 9px;
+	height: 9px;
 
+	background-color: #c5c5c5;
+	border-radius: 50%;
+}
 
+.energy-network input[type="radio"] + .radio-indicator {
+	top: -1.5px;
+}
 
+.manufacturers-list-item label:hover input[type="checkbox"] + .checkbox-indicator,
+.energy-list-item label:hover input[type="radio"] + .radio-indicator {
+	border-color: #b5b5b5;
+}
 
+.manufacturers-list-item label:hover input[type="checkbox"]:checked + .checkbox-indicator::before,
+.manufacturers-list-item label:hover input[type="checkbox"]:checked + .checkbox-indicator::after,
+.energy-list-item label:hover input[type="radio"]:checked + .radio-indicator::after {
+	background-color: #b5b5b5;
+}
 
+.manufacturers-list-item input[type="checkbox"]:disabled + .checkbox-indicator,
+.energy-list-item input[type="radio"]:disabled + .radio-indicator {
+	opacity: 0.4;
+}
 
+.manufacturers-list-item input[type="checkbox"]:disabled + .checkbox-indicator::before,
+.manufacturers-list-item input[type="checkbox"]:disabled + .checkbox-indicator::after,
+.energy-list-item input[type="radio"]:disabled + .radio-indicator::after {
+	opacity: 0.4;
+}
+/*Классы для скриптов*/
+.services-list-buttons-active {
+	color: #32425c;
+	background-color: #ffffff;
+}
 
-
-
-
-
-
+.feedback-form-show {
+	display: block;
+}
