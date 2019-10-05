@@ -1407,7 +1407,7 @@ h3.product-title {
 /*Модальное окно добавления в корзину*/
 .modal-to-cart {
 	display: none;
-	position: absolute;
+	position: fixed;
 	z-index: 10;
 	top: 411px;
 	left: 50%;
@@ -1471,8 +1471,8 @@ h3.product-title {
 .feedback-form .close-button,
 .modal-map .close-button {
 	position: absolute;
-	top: 5px;
-	right: 5px;
+	top: 8px;
+	right: 3px;
 	border: none;
 	background-color: #ffffff;
 }
@@ -1488,17 +1488,16 @@ h3.product-title {
 /*Форма обратной связи*/
 .feedback-form {
 	display: none;
-	position: absolute;
+	position: fixed;
 	z-index: 10;
 	width: 620px;
 	height: 430px;
-	top: 2520px;
+	top: 305px;
 	left: 50%;
 	margin-left: -310px;
-
 	background-color: inherit;
 	border-top: 7px solid #ee3643;
-	box-shadow: 0px 50px 40px 0 rgba(0, 0, 0, 0.75);
+	box-shadow: 0px 20px 40px 0 rgba(0, 0, 0, 0.75);
 }
 
 .feedback-form p {
@@ -1508,8 +1507,7 @@ h3.product-title {
 
 .feedback-form label {
 	display: block;
-	margin-bottom: 13px;
-
+	margin-bottom: 10px;
 	font-size: 18px;
 	line-height: 18px;
 	color: inherit;
@@ -1526,7 +1524,7 @@ h3.product-title {
 
 .feedback-form input,
 .feedback-form textarea {
-	padding: 13px 16px;
+	padding: 10px 13px;
 	border: 2px solid #dee3e4;
 }
 
@@ -1535,12 +1533,13 @@ h3.product-title {
 }
 
 .message label {
-	margin-top: 22px;
+	margin-top: 21px;
 }
 
 .feedback-form textarea {
 	width: 460px;
-	min-height: 141px;
+	min-height: 114px;
+	padding-top: 8px;
 }
 
 .feedback-form input::placeholder,
@@ -1553,7 +1552,8 @@ h3.product-title {
 }
 
 .feedback-form div:first-child {
-	padding: 55px 80px 37px;
+	height: 311px;
+	padding: 46px 71px 37px 81px;
 }
 
 .feedback-form div:nth-child(2) {
@@ -1566,16 +1566,14 @@ h3.product-title {
 	height: 38px;
 	padding: 10px 0px;
 	margin: 37px 80px;
-
 	font-family: inherit;
 	font-size: 14px;
 	line-height: 18px;
 	text-align: center;
 	text-transform: uppercase;
-
 	color: #ffffff;
 	background-color: #ee3643;
-	border-radius: 5px;
+	border-radius: 4px;
 	border: none;
 }
 .feedback-form input:hover,
@@ -1585,20 +1583,19 @@ h3.product-title {
 .feedback-form input:focus,
 .feedback-form textarea:focus {
 	border: 2px solid #ee3643;
+	outline: none;
 }
 
 /*Карта*/
 .modal-map {
 	display: none;
-	position: absolute;
+	position: fixed;
 	z-index: 10;
-	top: 3589px;
+	top: 134px;
 	left: 50%;
-
 	width: 940px;
 	height: 446px;
 	margin-left: -470px;
-
 	box-shadow: 0 0 14.7px 1.3px rgba(47, 42, 43, 0.5);
 }
 
