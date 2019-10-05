@@ -846,7 +846,7 @@ a.button:active {
 .filter .set-filter-2,
 .filter .set-filter-3 {
 	width: 220px;
-	margin-bottom: 17px;
+	margin-bottom: 16px;
 	border-bottom: 1px solid #e5e5e5;
 }
 
@@ -856,7 +856,7 @@ a.button:active {
 
 .filter .set-filter-2 {
 	min-height: 240px;
-	margin-bottom: 17px;
+	margin-bottom: 18px;
 }
 
 .filter .set-filter-3 {
@@ -899,7 +899,7 @@ a.button:active {
 
 .manufacturers-list-item {
 	height: 23px;
-	margin-bottom: 16px;
+	margin-bottom: 17px;
 }
 
 .filter-manufacturers-list input[type="checkbox"],
@@ -912,7 +912,7 @@ a.button:active {
 }
 
 .manufacturers-list-item:last-child {
-	margin-bottom: 23px;
+	margin-bottom: 20px;
 }
 
 .energy-list-item:last-child {
@@ -926,14 +926,14 @@ a.button:active {
 
 .checkbox-on svg {
 	position: absolute;
-	top: -2px;
+	top: -1px;
 	left: 0px;
 	width: 27px;
 	height: 23px;
 }
 
 .makita svg {
-	top: -1px;
+	top: -2px;
 	left: 0px;
 }
 
@@ -947,7 +947,7 @@ a.button:active {
 
 .dewalt svg,
 .hitachi svg {
-	top: 0px;
+	top: -2px;
 	left: 0px;
 }
 
@@ -2346,3 +2346,101 @@ h3.product-title {
     bottom: 0px;
     right: -8px;
 }
+/* Фильтр с ползунками*/
+.set-filter-1 .range-filter {
+	width: 220px;
+	height: 127px;	
+}
+.set-filter-1 .filter-title {
+	margin-bottom: 14px;
+}
+.range-controls {
+	position: relative;
+	
+	width: 220px;
+	height: 80px;	
+	margin-bottom: 9px;
+	padding-top: 39px;
+	padding-left: 20px;
+	padding-right: 20px;
+	
+	background-color: #f7f3ec;
+	border-radius: 3px;
+}
+.range-controls .scale {	
+	height: 2px;
+	
+	background: #d7dcde;
+}
+.range-controls .bar {
+	width: 150px;
+	height: 2px;
+	
+	background: #07ca7c;
+}
+.range-controls .toggle {
+	position: absolute;
+	top: 30px;	
+	
+	box-sizing: content-box;
+	width: 4px;
+	height: 4px;	
+	padding: 0px;
+	margin: 0px;
+	
+	background-color: #ababab;
+	box-shadow: 0 2px 1px 0 #dfdcd7;
+	border: 8px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.range-controls .toggle-min {
+	left: 20px;
+}
+.range-controls .toggle-max {
+	left: 160px;
+}
+.price-controls {
+	font-size: 0px;
+}
+.price-controls input {
+	width: 95px;
+	height: 38px;
+	
+	padding: 5px 9px 6px 14px;
+	
+	font-size: 17px;
+	line-height: 18px;
+	text-align: center;
+	
+	background-color: #f7f3ec;
+	border-radius: 3px;
+	border: none;
+}
+.price-controls span {
+    display: inline-block;
+    margin: 0px 7px 0px 9px;
+    font-size: 17px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
