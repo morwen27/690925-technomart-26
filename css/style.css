@@ -7,6 +7,7 @@
 6. Разное 
 */
 
+
 html {
 	box-sizing: border-box;
 }
@@ -1374,6 +1375,7 @@ h3.product-title {
 	right: 3px;
 	border: none;
 	background-color: #ffffff;
+	cursor: pointer;
 }
 
 .modal-to-cart .close-button::before,
@@ -1945,14 +1947,16 @@ h3.product-title {
 .slider-link:hover,
 .popular-product .all-popular-product:hover,
 .popular-manufacturer .all-manufacturers-link:hover,
-.service-credit .request-button:hover {
+.service-credit .request-button:hover,
+.button-submit:hover {
 	background-color: #ca2c37;
 }
 
 .slider-link:active,
 .popular-product .all-popular-product:active,
 .popular-manufacturer .all-manufacturers-link:active,
-.service-credit .request-button:active {
+.service-credit .request-button:active,
+.button-submit:active {
 	background-color: #ba2732;
 }
 
@@ -2455,4 +2459,22 @@ h3.product-title {
 
 .feedback-form-show {
 	display: block;
+	animation-name: bounce;
+	animation-duration: 0.6s;
+}
+.modal-error {
+	animation-name: shake;
+	animation-duration: 0.6s;
+}
+
+@keyframes bounce {
+	0% {transform: translateY(671px); }
+	70% {transform: translateY(-50px); }
+	90% {transform: translateY(10px); }
+	100% {transform: translateY(0px); }
+}
+@keyframes shake {
+	0%, 100% {transform: translateX(0px);}
+	10%, 30%, 50%, 70%, 90% {transform: translateY(-20px);}
+	20%, 40%, 60%, 80% {transform: translateX(20px)};}
 }
