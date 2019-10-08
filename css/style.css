@@ -584,11 +584,13 @@ input[type="radio"].visually-hidden {
 	border-radius: 3px;
 }
 
-a.button:hover {
+a.button:hover,
+.modal-button:hover {
 	background-color: #ca2c37;
 }
 
-a.button:active {
+a.button:active,
+.modal-button:active {
 	background-color: #ba2732;
 }
 
@@ -1504,6 +1506,22 @@ h3.product-title {
 
 .modal-map .close-button {
 	background-color: transparent;
+	z-index: 3;
+}
+.modal-map iframe {
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    border: none;
+}
+
+.modal-map p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    margin: 0;
 }
 
 /*Сетки*/
@@ -2462,19 +2480,22 @@ h3.product-title {
 	animation-name: bounce;
 	animation-duration: 0.6s;
 }
-.modal-error {
+.feedback-form-error {
 	animation-name: shake;
 	animation-duration: 0.6s;
 }
-
+.map-show {
+	display: block;
+}
 @keyframes bounce {
-	0% {transform: translateY(671px); }
-	70% {transform: translateY(-50px); }
-	90% {transform: translateY(10px); }
-	100% {transform: translateY(0px); }
+	0% { transform: translateY(671px); }
+	70% { transform: translateY(-50px); }
+	90% { transform: translateY(10px); }
+	100% { transform: translateY(0); }
 }
 @keyframes shake {
-	0%, 100% {transform: translateX(0px);}
-	10%, 30%, 50%, 70%, 90% {transform: translateY(-20px);}
-	20%, 40%, 60%, 80% {transform: translateX(20px)};}
+	0%, 100% { transform: translateX(0); }
+	10%, 30%, 50%, 70%, 90% { transform: translateX(-20px); }
+	20%, 40%, 60%, 80% { transform: translateX(20px) };
 }
+

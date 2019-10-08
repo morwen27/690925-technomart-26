@@ -4,7 +4,11 @@ var closeFeedbackForm = feedbackForm.querySelector(".close-button"); //Нахо�
 var userName = feedbackForm.querySelector("[name=name]"); //Находим инпут для логина, чтобы при клике поставить в него фокус
 var userMail = feedbackForm.querySelector("[name=mail]");
 var feedbackMessage = feedbackForm.querySelector("[name=message]");
-var form = feedbackForm.querySelector("form"); //Находим разметку формы, чтобы проверить ее поля на обязательность заполнения
+var form = feedbackForm.querySelector(".feedback-form > form"); //Находим разметку формы, чтобы проверить ее поля на обязательность заполнения
+var deleteClassError = function () {
+	feedbackForm.classList.remove("feedback-form-error");
+};
+
 
 //Выясняем, работает ли localStorage, чтобы избежать ошибки и прерывания работы скрипта
 
@@ -44,8 +48,12 @@ feedbackLink.addEventListener("click", function (evt) {
 
 form.addEventListener("submit", function (evt) {
 	if (!userName.value || !userMail.value || !feedbackMessage.value) {
-		evt.preventDefault();
-		feedbackForm.classList.add("modal-error");
+		evt.preventDefault();		
+		feedbackForm.classList.remove("feedback-form-error");
+		feedbackForm.offsetWidth = feedbackForm.offsetWidth;
+		feedbackForm.classList.add("feedback-form-error");
+		//var timeoutId = setTimeout(deleteClassError, 1000);
+		//clearTimeout(timeoutId);
 	} else {
 		if (isStorageSupport) {
 			localStorage.setItem("userName", userName.value);
@@ -59,7 +67,7 @@ form.addEventListener("submit", function (evt) {
 closeFeedbackForm.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	feedbackForm.classList.remove("feedback-form-show");
-	feedbackForm.classList.remove("modal-error");
+	feedbackForm.classList.remove("feedback-form-error");
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -67,7 +75,7 @@ window.addEventListener("keydown", function (evt) {
 		if (feedbackForm.classList.contains("feedback-form-show")) {
 			evt.preventDefault();
 			feedbackForm.classList.remove("feedback-form-show");
-			feedbackForm.classList.remove("modal-error");
+			feedbackForm.classList.remove("feedback-form-error");
 		}
 	}
 });

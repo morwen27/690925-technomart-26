@@ -338,13 +338,11 @@
 					заехав в наш офис:
 				</p>
 				<p class="small-map">
-					<a href="https://yandex.ru/maps/-/CGSWrLlD" target="_blank">
-					<iframe src="https://yandex.ru/map-widget/v1/-/CGswM24d" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
-						<img src="./img/map-mini.png" width="300" height="158" alt="Карта с местонахождением магазина «Техномарт»">
+					<a href="" class="link-map">
+					<img src="./img/map-mini.png" width="300" height="158" alt="Карта с местонахождением магазина «Техномарт»">
 					</a>
 				</p>
-				<a class=" button modal-button" href="">Заблудились? Напишите нам!</a>
-
+				<a class="button modal-button" href="">Заблудились? Напишите нам!</a>
 			</div>
 		</section>
 	</main>
@@ -430,7 +428,11 @@
 
 	<section class="modal-map">
 		<h2 class="visually-hidden">Карта</h2>
-		<img class="map" src="./img/map.jpg" width="940" height="446" alt="Адрес интернет-магазина «Техномарт»: город Санкт-Петергург, улица Большая Конюшенная, 19">
+		<iframe src="https://yandex.ru/map-widget/v1/-/CGswM24d" width="940" height="446" frameborder="1" allowfullscreen="true">			
+		</iframe>
+		<p>
+			<img class="map" src="./img/map.jpg" width="940" height="446" alt="Адрес интернет-магазина «Техномарт»: город Санкт-Петергург, улица Большая Конюшенная, 19">
+		</p>
 		<button class="close-button" type="button" aria-label="Закрыть форму обратной связи"></button>
 	</section>
 
@@ -440,15 +442,15 @@
 			<div>
 				<p class="input-login">
 					<label for="field-for-name">Ваше имя:</label>
-					<input id="field-for-name" type="text" name="name" placeholder="Имя Фамилия" required>
+					<input id="field-for-name" type="text" name="name" placeholder="Имя Фамилия">
 				</p>
 				<p class="input-mail">
 					<label for="field-for-mail">Ваш e-mail:</label>
-					<input id="field-for-mail" type="email" name="mail" placeholder="email@example.com" required>
+					<input id="field-for-mail" type="email" name="mail" placeholder="email@example.com">
 				</p>
 				<p class="message">
 					<label for="field-for-message">Текст письма:</label>
-					<textarea id="field-for-message" name="message" placeholder="В свободной форме" required></textarea>
+					<textarea id="field-for-message" name="message" placeholder="В свободной форме"></textarea>
 				</p>
 			</div>
 			<div>
@@ -457,8 +459,20 @@
 		</form>
 		<button class="close-button" type="button" aria-label="Закрыть форму обратной связи"></button>
 	</section>
+	
+	<section class="modal-to-cart">
+		<h2 class="visually-hidden">Модальное окно добавления в корзину</h2>
+		<p class="modal-info">Товар успешно добавлен в корзину!</p>
+		<p class="button-group">
+			<a class="button modal-button to-order" href="">Оформить заказ</a>
+			<a class="button modal-button сontinue-shopping" href="">Продолжить покупки</a>
+		</p>
+		<button class="button close-button" type="button" aria-label="Закрыть модальное окно"></button>
+	</section>
 
 	<script src="./js/feedback-form.js"></script>
+	<script src="./js/modal-map.js"></script>
+	<script src="./js/to-cart.js"></script>
 
 </body>
 
