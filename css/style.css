@@ -585,7 +585,7 @@ input[type="radio"].visually-hidden {
 }
 
 a.button:hover,
-.modal-button:hover {
+.сontinue-shopping:hover {
 	background-color: #ca2c37;
 }
 
@@ -776,6 +776,7 @@ a.button:active,
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
+	flex-wrap: wrap;
 	height: 59px;
 	padding: 0;
 	margin: 0px;
@@ -1324,29 +1325,30 @@ h3.product-title {
 }
 
 .modal-info {
+	height: 163px;
 	margin: 0px;
-	padding-top: 75px;
-	padding-bottom: 68px;
-
+	padding-top: 46px;
+	padding-bottom: 60px;
+	padding-left: 83px;
 	font-size: 30px;
 	line-height: 30px;
-	text-align: center;
 }
 
 .modal-info::before {
 	content: url("../img/form-1.svg");
+	position: relative;
+	top: 2px;
+	left: -2px;
 	width: 66px;
 	height: 66px;
-	padding-right: 32px;
+	padding-right: 31px;
 	vertical-align: middle;
 }
 
 .button-group {
 	height: 112px;
 	margin: 0px;
-
 	text-align: center;
-
 	background-color: #f1f1f1;
 }
 
@@ -1354,17 +1356,21 @@ h3.product-title {
 	display: inline-block;
 	width: 220px;
 	height: 38px;
-	padding: 10px 0px;
+	padding: 11px 0px;
 	margin-top: 37px;
 	margin-bottom: 37px;
-	margin-right: 20px;
-
+	margin-right: 1px;
 	font-size: 14px;
 	line-height: 18px;
 	text-align: center;
+	text-transform: uppercase;
+	color: #ffffff;
+	background-color: #ee3643;
+	border-radius: 3px;
 }
 
 .button-group .сontinue-shopping {
+	margin-left: 15px;
 	color: #000000;
 	background-color: #ffffff;
 }
@@ -1624,6 +1630,7 @@ h3.product-title {
 
 .footer-second-menu {
 	display: flex;
+	flex-wrap: wrap;
 	padding: 0px;
 	margin: 0px;
 	margin-top: 28px;
@@ -1981,9 +1988,8 @@ h3.product-title {
 /*Популярные продукты*/
 .popular-product {
 	position: relative;
-
 	width: 940px;
-	height: 428px;
+	min-height: 428px;
 	margin-top: 53px;
 }
 
@@ -2040,7 +2046,7 @@ h3.product-title {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-content: space-between;
-	height: 310px;
+	min-height: 310px;
 	margin: 0px;
 	padding: 0px;
 }
@@ -2180,15 +2186,13 @@ h3.product-title {
 	display: block;
 	width: 240px;
 	height: 61px;
-	padding: 0px 0px 8px 22px;
-
+	padding: 3px 0px 8px 22px;
 	font-family: inherit;
 	font-size: 21px;
 	line-height: 30px;
 	font-weight: 700;
 	color: #ffffff;
 	text-align: left;
-
 	background-color: #32425c;
 	box-shadow: 0px 1px 0 0 #293449, inset 0px 1px 0 0 #405069;
 	border: none;
@@ -2485,6 +2489,9 @@ h3.product-title {
 	animation-duration: 0.6s;
 }
 .map-show {
+	display: block;
+}
+.modal-to-cart-show {
 	display: block;
 }
 @keyframes bounce {

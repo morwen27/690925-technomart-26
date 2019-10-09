@@ -1,4 +1,4 @@
-var buyLinks = document.querySelectorAll(".to-cart"); //Находим все ссылки на "Купить"
+var buyLink = document.querySelector(".to-cart"); //Находим первую кнопку "Купить", ибо про делегирование мы еще не знаем :(
 var modalToCart = document.querySelector(".modal-to-cart"); //Находим разметку модального окна, оповещающего о добавлении товара в корзину
 var closeModalToCart = modalToCart.querySelector(".close-button"); //Находим кнопкe-закрывалку
 var linkContinue = modalToCart.querySelector(".сontinue-shopping"); //Находим кнопку "Продолжить покупки"
@@ -6,8 +6,8 @@ var order = modalToCart.querySelector(".to-order"); //Находим кнопк�
 
 //Вешаем событие
 
-buyLinks.addEventListener("click", function (evt) {
-	evt.preventDefault();
+buyLink.addEventListener("click", function (evt) {
+	evt.preventDefault();	
 	modalToCart.classList.add("modal-to-cart-show");
 });
 
