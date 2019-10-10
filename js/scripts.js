@@ -1,3 +1,33 @@
+//1. Карта
+
+var mapLink = document.querySelector(".link-map"); //Находим ссылку на карту
+var map = document.querySelector(".modal-map"); //и разметку модальной карты
+var closeMap = map.querySelector(".close-button"); //и кнопку закрытия
+
+//По клику открываем карту
+mapLink.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	map.classList.add("map-show");
+});
+
+//По нажатию клавиши или мышью - закрываем
+
+closeMap.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	map.classList.remove("map-show");
+});
+
+window.addEventListener("keydown", function (evt) {
+	if (evt.keyCode === 27) {
+		evt.preventDefault();
+		if (map.classList.contains("map-show")) {			
+			map.classList.remove("map-show");
+		}
+	}
+});
+
+//2. Форма обратной связи
+
 var feedbackLink = document.querySelector(".modal-button"); //Находим кнопку вызова формы обратной связи
 var feedbackForm = document.querySelector(".feedback-form"); //Находим разметку формы обратной связи
 var closeFeedbackForm = feedbackForm.querySelector(".close-button"); //Находим кнопку, которая закрывает ФОС
@@ -76,6 +106,48 @@ window.addEventListener("keydown", function (evt) {
 			evt.preventDefault();
 			feedbackForm.classList.remove("feedback-form-show");
 			feedbackForm.classList.remove("feedback-form-error");
+		}
+	}
+});
+
+
+//3. Модальное окно добавления товара в корзину 
+
+var buyLink = document.querySelector(".to-cart"); //Находим первую кнопку "Купить", ибо про делегирование мы еще не знаем :(
+var modalToCart = document.querySelector(".modal-to-cart"); //Находим разметку модального окна, оповещающего о добавлении товара в корзину
+var closeModalToCart = modalToCart.querySelector(".close-button"); //Находим кнопкe-закрывалку
+var linkContinue = modalToCart.querySelector(".сontinue-shopping"); //Находим кнопку "Продолжить покупки"
+var order = modalToCart.querySelector(".to-order"); //Находим кнопку "Оформить заказ"
+
+//Вешаем событие
+
+buyLink.addEventListener("click", function (evt) {
+	evt.preventDefault();	
+	modalToCart.classList.add("modal-to-cart-show");
+});
+
+//Закрываем
+
+closeModalToCart.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	modalToCart.classList.remove("modal-to-cart-show");
+});
+
+linkContinue.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	modalToCart.classList.remove("modal-to-cart-show");
+});
+
+order.addEventListener("click", function (evt) {
+	evt.preventDefault();
+	modalToCart.classList.remove("modal-to-cart-show");
+});
+
+window.addEventListener("keydown", function (evt) {
+	if (evt.keyCode === 27) {
+		evt.preventDefault();
+		if (modalToCart.classList.contains("modal-to-cart-show")) {			
+			modalToCart.classList.remove("modal-to-cart-show");
 		}
 	}
 });
